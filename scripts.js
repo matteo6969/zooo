@@ -1,8 +1,8 @@
 const enclosures = [
     {
         name: "Vallon des Cascades",
-        animals: ["Lions", "Tigres"],
-        description: "Cet enclos abrite des lions et des tigres dans un environnement de cascades.",
+        animals: ["Panda Roux", "Chèvre Naine","Lémurien", "Tortue","Mouflon"],
+        description: "Cet enclos réunit une variété d'animaux exotiques, incluant des pandas roux, des chèvres naines, des lémuriens, des tortues et des mouflons. L'espace est aménagé pour offrir des zones boisées, des surfaces herbeuses et des structures pour grimper, favorisant l'interaction et l'épanouissement de ces espèces.",
         images: ["image1.jpg", "image2.jpg"] // Replace with actual image paths
     },
     {
