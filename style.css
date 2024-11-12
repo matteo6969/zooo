@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0ecdc;
+}
+
+header {
+    background-color: #d0d292;
+    color: #475429;
+    padding: 1em;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav a {
+    color: #f0ecdc;
+    margin: 0 1em;
+    text-decoration: none;
+}
+
+section {
+    padding: 2em;
+    margin: 1em auto;
+    max-width: 800px;
+    background-color: #d0d292;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #475429;
+}
+
+.enclosure-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.enclosure-item {
+    background-color: #d0d292;
+    padding: 1em;
+    border-radius: 8px;
+    width: calc(50% - 1em);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #d0d292;
+    color:#475429 ;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a7a876;
+}
+
+
+#review-form, #enclosure-details {
+    margin-top: 2em;
+}
+
+label, textarea, select {
+    display: block;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+textarea {
+    height: 100px;
+}
+
+.urgence{
+    display:flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}

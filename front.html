@@ -1,1 +1,85 @@
-blzlz
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parc Animalier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue au Parc Animalier</h1>
+        <nav>
+            <a href="#profile">Mon Profil</a>
+            <a href="#enclosures">Les Enclos</a>
+            <a href="#services">Services du Parc</a>
+        </nav>
+    </header>
+    <section id="profile">
+        <h2>Connexion / Inscription</h2>
+        <form id="loginForm">
+            <label for="username">Nom d'utilisateur :</label>
+            <input type="text" id="username" name="username">
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password">
+            <button type="submit">Se connecter</button>
+        </form>
+    </section>
+
+    <section id="enclosures">
+        <h2>Les Enclos</h2>
+        <div class="enclosure-list">
+
+            <div class="enclosure-item">
+                <h3>Vallon des Cascades</h3>
+                <p>Animaux : Lions, Tigres</p>
+                <button onclick="viewEnclosureDetails()">Voir les détails</button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="services">
+        <h2>Services du Parc</h2>
+        <ul>
+            <li>Boutique</li>
+            <li>Snack</li>
+            <li>Aires de Pique-Nique</li>
+
+        </ul>
+    </section>
+
+
+    <section id="enclosure-details" style="display: none;">
+        <h2>Détails de l'Enclos</h2>
+        <div class="carousel">
+            
+        </div>
+        <p>Description des animaux présents...</p>
+        <button onclick="toggleReviewForm()">Laisser un avis</button>
+    </section>
+
+
+    <section id="review-form" style="display: none;">
+        <h2>Noter l'Enclos</h2>
+        <form>
+            <label for="rating">Note :</label>
+            <select id="rating" name="rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <label for="comment">Commentaire :</label>
+            <textarea id="comment" name="comment"></textarea>
+            <button type="submit">Soumettre</button>
+        </form>
+    </section>
+    <div class="urgence"><img src="urgence.png" /></div>
+    
+
+    <script src="scripts.js"></script>
+</body>
+</html>
