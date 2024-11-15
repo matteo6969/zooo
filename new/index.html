@@ -8,37 +8,53 @@
 </head>
 <body>
     <header>
-        <h1>Bienvenue au Parc Animalier</h1>
+        <nav>
+            <h1>Parc Animalier</h1>
+            <ul>
+                <li><a href="#discover">Découvrir le Parc</a></li>
+                <li><a href="#animals">Nos Animaux</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><button id="openMapBtn" class="map-button">Plan du Parc</button></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
+        <!-- Section Découvrir le Parc -->
         <section id="discover">
-            <h2>Découvrir le Parc</h2>
-            <p>Explorez les merveilles du parc animalier. Découvrez nos enclos, nos services et plus encore.</p>
-            <a href="parc.html" class="btn">Découvrir</a>
-            <button id="openMapBtn" class="btn">Voir le plan du parc</button>
-        </section>
-
-        <section id="animals">
-            <h2>Nos Animaux</h2>
-            <p>Rencontrez les différentes espèces présentes dans nos enclos. Du lion majestueux au panda roux.</p>
-            <a href="animaux.html" class="btn">Voir les Animaux</a>
-        </section>
-
-        <section id="services">
-            <h2>Services du Parc</h2>
-            <p>Découvrez nos services : boutiques, restaurants, aires de pique-nique et bien plus.</p>
-            <a href="services.html" class="btn">Explorer les Services</a>
-        </section>
-
-        <!-- Modale pour afficher le plan du parc -->
-        <div id="mapModal" class="modal">
-            <div class="modal-content">
-                <span id="closeModal" class="close">&times;</span>
-                <img src="images/parc-plan.jpeg" alt="Plan du parc" class="modal-image">
+            <div class="section-content">
+                <h2>Découvrir le Parc</h2>
+                <p>Bienvenue dans notre parc animalier, un endroit où vous pouvez explorer la biodiversité, en apprendre davantage sur nos magnifiques animaux et passer une journée inoubliable en famille.</p>
+                <a href="parc.html" class="btn">En savoir plus</a>
             </div>
-        </div>
+        </section>
+
+        <!-- Section Nos Animaux -->
+        <section id="animals">
+            <div class="section-content">
+                <h2>Nos Animaux</h2>
+                <p>Découvrez la variété d'espèces que nous accueillons, du majestueux lion à l'adorable panda roux, dans des habitats recréés pour leur bien-être.</p>
+                <a href="animaux.html" class="btn">Voir les Animaux</a>
+            </div>
+        </section>
+
+        <!-- Section Services -->
+        <section id="services">
+            <div class="section-content">
+                <h2>Services du Parc</h2>
+                <p>Profitez de nos services pour rendre votre visite agréable : boutique de souvenirs, restaurants, espaces de pique-nique et plus encore.</p>
+                <a href="services.html" class="btn">Explorer les Services</a>
+            </div>
+        </section>
     </main>
+
+    <!-- Modale pour afficher le plan du parc -->
+    <div id="mapModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <img src="images/parc-plan.jpeg" alt="Plan du parc" class="modal-image">
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2024 Parc Animalier. Tous droits réservés.</p>
