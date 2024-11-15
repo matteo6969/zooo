@@ -14,7 +14,6 @@ CREATE TABLE enclosures (
 CREATE TABLE animals (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
-    species VARCHAR(255),
     enclosure_id INT,
     FOREIGN KEY (enclosure_id) REFERENCES enclosures(id) ON DELETE SET NULL
 );
