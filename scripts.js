@@ -11,11 +11,8 @@ const enclosures = [
         description: "Un vaste plateau où les éléphants et les girafes se déplacent librement.",
         images: ["image11.jpg", "image12.jpg","image13.jpg","image14.jpg","image15.jpg","image16.jpg","image17.jpg", "image18.jpg","image19.jpg","image20.jpg"] 
     }
-        images: ["image11.jpg", "image12.jpg","image13.jpg","image14.jpg","image15.jpg","image16.jpg","image17.jpg", "image18.jpg","image19.jpg","image20.jpg"]
-    },
     {
         name: "Le Bélvèdère",
-        animals: ["Rhinocéros", "Oryx beisa", "Suricate", "Fennec", "Coati", "Gnou", "Saimiri", "Tapir", "Autruche"],
         animals: ["Rhinocéros", "Oryx beisa", "Suricate", "Fennec", "Coati", "Gnou", "Saimiri", "Tapir", "Autruche", "Gazelle"],
         description: "Un vaste plateau où les éléphants et les girafes se déplacent librement.",
         images: ["image21.jpg", "image22.jpg"] 
