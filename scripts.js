@@ -2,31 +2,37 @@ const enclosures = [
     {
         name: "Vallon des Cascades",
         animals: ["Panda Roux", "Lemurien", "Chèvre naine", "Tortue", "Mouflon", "Binturong", "Loutre", "Ara perroquet", "Grand hocco", "Panthère"],
-        description: "Cet enclos abrite des lions et des tigres dans un environnement de cascades.",
+        description: "Avec son environnement riche en végétation et ses cascades rafraîchissantes, le Vallon des Cascades est l’habitat idéal pour des animaux comme les lions, les panthères et les singes tamarins. La cascade ajoute une touche naturelle et relaxante à cette zone.",
         images: ["image1.jpg", "image2.jpg","image3.jpg","image4.jpg","image5.jpg","image6.jpg","image7.jpg", "image8.jpg","image9.jpg","image10.jpg",] 
     },
     {
         name: "Le Plateau",
         animals: ["Tamarin Capucin", "Ouistiti Gibbon", "Varan de komodo", "Grivet cercopithèque", "Elephant", "Girafe", "Hyène", "Loup à crinière", "Zebre", "Lion", "Hippopotame"],
-        description: "Un vaste plateau où les éléphants et les girafes se déplacent librement.",
+        description: "Cette zone regroupe une variété d'animaux impressionnants comme les éléphants, les girafes et les zèbres. Aménagé pour reproduire l'habitat naturel des grandes plaines, le Plateau est un endroit privilégié pour observer les interactions sociales de ces espèces.",
         images: ["image11.jpg", "image12.jpg","image13.jpg","image14.jpg","image15.jpg","image16.jpg","image17.jpg", "image18.jpg","image19.jpg","image20.jpg"] 
     }
     {
         name: "Le Bélvèdère",
         animals: ["Rhinocéros", "Oryx beisa", "Suricate", "Fennec", "Coati", "Gnou", "Saimiri", "Tapir", "Autruche", "Gazelle"],
-        description: "Un vaste plateau où les éléphants et les girafes se déplacent librement.",
+        description: "Situé en hauteur, cet enclos offre un panorama unique sur le parc. Vous y rencontrerez des animaux majestueux comme les gazelles et les gnous, évoluant dans un habitat qui simule les plaines africaines. Des points d'observation permettent de voir ces créatures fascinantes de près.",
         images: ["image21.jpg", "image22.jpg"] 
     }
     {
         name: "Les Clairières",
         animals: ["Marabout", "Cigogne", "Oryx algazelle", "Watusi", "Ane de Somalie", "Yack", "Mouton noir", "Ibis", "Tortue", "Pécari", "Tamanoir","Flamant rose", "Nandou", "Emeu", "Wallaby", "Porc épic", "Bison", "Ane de Provence", "Dromadaire", "Lynx", "Serval", "Chien des buissons", "Tigres"],
-        description: "Un vaste plateau où les éléphants et les girafes se déplacent librement.",
+        description: "Un enclos où vous pouvez découvrir des espèces d'oiseaux fascinants, notamment le vol d’oiseaux tels que les cigognes et les flamants roses. Les animaux à sabots, comme les watusis et les ânes de Somalie, cohabitent paisiblement dans ce cadre verdoyant.",
         images: ["image21.jpg", "image22.jpg"] 
     }
     {
         name: "Le bois des pins",
-        animals: ["Marabout", "Cigogne", "Oryx algazelle", "Watusi", "Ane de Somalie", "Yack", "Mouton noir", "Ibis", "Tortue", "Pécari", "Tamanoir","Flamant rose", "Nandou", "Emeu", "Wallaby", "Porc épic", "Bison", "Ane de Provence", "Dromadaire", "Lynx", "Serval", "Chien des buissons", "Tigres"],
-        description: "Un vaste plateau où les éléphants et les girafes se déplacent librement.",
+        animals: ["Macaque crabier", "Cerf", "Vautour", "Antilope", "Daim", "Nilgaut", "Loup d'Europe", "Ibis", "Tortue", "Pécari", "Tamanoir","Flamant rose", "Nandou", "Emeu", "Wallaby", "Porc épic", "Bison", "Ane de Provence", "Dromadaire", "Lynx", "Serval", "Chien des buissons", "Tigres"],
+        description: "Cette zone boisée est le refuge parfait pour les animaux européens et d'autres espèces rustiques. Vous y trouverez des animaux comme les loups d'Europe, les cerfs et les mouflons, évoluant dans un environnement qui rappelle les forêts de pins. Ce lieu calme et ombragé permet une immersion totale dans la nature, idéale pour observer ces espèces dans un habitat naturel.",
+        images: ["image21.jpg", "image22.jpg"] 
+    }
+    {
+        name: "La bergerie des reptiles",
+        animals: ["Python", "Tortue", "Iguane"],
+        description: "Cette zone offre un aperçu fascinant de la vie des reptiles. Vous y trouverez des iguanes, des tortues, et même des pythons dans un environnement soigneusement contrôlé pour leur bien-être. La Bergerie permet aux visiteurs de mieux comprendre ces créatures souvent méconnues.",
         images: ["image21.jpg", "image22.jpg"] 
     }
 ];
