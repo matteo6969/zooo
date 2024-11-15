@@ -24,12 +24,13 @@ header nav {
     padding: 0 1em;
 }
 
-header h1 {
+.logo h1 {
     margin: 0;
-    font-size: 1.5em;
+    font-size: 1.8em;
+    color: #f0ecdc;
 }
 
-header ul {
+.nav-links {
     list-style: none;
     display: flex;
     gap: 1.5em;
@@ -37,45 +38,45 @@ header ul {
     padding: 0;
 }
 
-header ul li a, .map-button {
-    color: #fff;
+.nav-links li a, .map-button {
+    color: #f0ecdc;
     text-decoration: none;
     font-weight: bold;
-    cursor: pointer;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background 0.3s ease;
 }
 
 .map-button {
     background: #a7a876;
     border: none;
-    padding: 0.5em 1em;
-    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
 }
 
-.map-button:hover {
+.nav-links li a:hover, .map-button:hover {
     background: #8e8c64;
 }
 
-/* Sections */
-section {
-    padding: 4em 1em;
-    background-color: #f0ecdc;
+/* Hero Section */
+.hero-section {
+    background-image: url('images/hero-background.jpg'); /* Mettez une image d'arrière-plan appropriée */
+    background-size: cover;
+    background-position: center;
+    padding: 8em 1em;
+    color: #fff;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2em;
 }
 
-section:nth-child(odd) {
-    background-color: #e3e1d1;
+.hero-section .hero-content h2 {
+    font-size: 2.5em;
+    margin: 0.5em 0;
 }
 
-.section-content {
-    max-width: 800px;
+.hero-section .hero-content p {
+    max-width: 600px;
     margin: auto;
-}
-
-h2 {
-    color: #475429;
-    margin-bottom: 0.5em;
+    line-height: 1.6;
 }
 
 .btn {
@@ -91,6 +92,28 @@ h2 {
 
 .btn:hover {
     background-color: #a7a876;
+}
+
+/* Sections */
+.section {
+    padding: 4em 1em;
+    background-color: #f0ecdc;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section:nth-child(odd) {
+    background-color: #e3e1d1;
+}
+
+.section-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+h2 {
+    color: #475429;
+    margin-bottom: 0.5em;
 }
 
 /* Styles pour la modale */
