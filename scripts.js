@@ -1,6 +1,6 @@
 const enclosures = [
     {
-        name: "Vallon des Cascades bonjour",
+        name: "Vallon des Cascades",
         animals: ["Panda Roux", "Lemurien", "Chèvre naine", "Tortue", "Mouflon", "Binturong", "Loutre", "Ara perroquet", "Grand hocco", "Panthère"],
         description: "Cet enclos abrite des lions et des tigres dans un environnement de cascades.",
         images: ["image1.jpg", "image2.jpg","image3.jpg","image4.jpg","image5.jpg","image6.jpg","image7.jpg", "image8.jpg","image9.jpg","image10.jpg",] 
@@ -13,9 +13,9 @@ const enclosures = [
     }
     {
         name: "Le Bélvèdère",
-        animals: ["Rhinocéros", "Oryx beisa", "Suricate", "Fennec", "Coati", "Gnou", "Saimiri", "Tapir", "Autruche", "Gazelle"],
+        animals: ["Rhinocéros", "Oryx beisa", "Suricate", "Fennec", "Coati", "Gnou", "Saimiri", "Tapir", "Autruche", "Gazelle", "Guépard", "Casoar", "Crocodile nain"],
         description: "Un vaste plateau où les éléphants et les girafes se déplacent librement.",
-        images: ["image21.jpg", "image22.jpg"] 
+        images: ["image21.jpg", "image22.jpg", "image21.jpg", "image22.jpg", "image21.jpg", "image22.jpg", "image21.jpg", "image22.jpg] 
     }
 ];
 
