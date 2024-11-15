@@ -16,6 +16,7 @@
             <h2>Découvrir le Parc</h2>
             <p>Explorez les merveilles du parc animalier. Découvrez nos enclos, nos services et plus encore.</p>
             <a href="parc.html" class="btn">Découvrir</a>
+            <button id="openMapBtn" class="btn">Voir le plan du parc</button>
         </section>
 
         <section id="animals">
@@ -29,10 +30,20 @@
             <p>Découvrez nos services : boutiques, restaurants, aires de pique-nique et bien plus.</p>
             <a href="services.html" class="btn">Explorer les Services</a>
         </section>
+
+        <!-- Modale pour afficher le plan du parc -->
+        <div id="mapModal" class="modal">
+            <div class="modal-content">
+                <span id="closeModal" class="close">&times;</span>
+                <img src="images/parc-plan.jpeg" alt="Plan du parc" class="modal-image">
+            </div>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2024 Parc Animalier. Tous droits réservés.</p>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
