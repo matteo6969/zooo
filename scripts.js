@@ -1,6 +1,6 @@
 const enclosures = [
     {
-        name: "Vallon des Cascades",
+        name: "Vallon des Cascades bonjour",
         animals: ["Panda Roux", "Lemurien", "Chèvre naine", "Tortue", "Mouflon", "Binturong", "Loutre", "Ara perroquet", "Grand hocco", "Panthère"],
         description: "Cet enclos abrite des lions et des tigres dans un environnement de cascades.",
         images: ["image1.jpg", "image2.jpg","image3.jpg","image4.jpg","image5.jpg","image6.jpg","image7.jpg", "image8.jpg","image9.jpg","image10.jpg",] 
