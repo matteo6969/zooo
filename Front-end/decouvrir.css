@@ -1,0 +1,67 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #2f5233; /* Couleur verte */
+    color: #ffffff;
+    padding: 1em 0;
+    position: fixed; /* Fixe le header en haut de la page */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1em;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #f0ecdc;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #f0ecdc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Section Parc Plan */
+#parc-plan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto 50px; /* Ajuste l'espacement pour ne pas chevaucher le header */
+    padding: 20px;
+    text-align: center;
+}
+
+.background-image img {
+    width: 100%; /* L'image prend 80% de la largeur du conteneur */
+    max-width: auto; /* Taille maximale */
+    height: 700px; /* Maintient les proportions */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre pour l'esthétique */
+}

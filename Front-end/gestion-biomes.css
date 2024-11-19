@@ -1,0 +1,107 @@
+/* Styles de base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header et navigation */
+header {
+    background-color: #475429;
+    color: #ffffff74;
+    padding: 1em 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1em;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #f0ecdc;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a, .map-button {
+    color: #f0ecdc;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.map-button {
+    background: #a7a876;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-links li a:hover, .map-button:hover {
+    background: #8e8c64;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.8em;
+    color: #2f5233;
+}
+
+/* Container des biomes */
+.biomes-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Trois colonnes */
+    gap: 20px; /* Espacement entre les cartes */
+    max-width: 1000px;
+    margin: 0 auto; /* Centre le contenu */
+    padding: 20px;
+}
+
+/* Cartes de chaque biome */
+.biome-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-align: center;
+    border-radius: 15px;
+    padding: 40px 20px; /* Dimensions des cartes */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ajoute une ombre */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.biome-card:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Ombre accentuée */
+}
+header {
+    background-color: #2f5233; /* Couleur de fond */
+    color: #ffffff; /* Couleur du texte */
+    text-align: center;
+    padding: 1em 0;
+    position: fixed; /* Rend le header toujours visible */
+    top: 0; /* Fixe le header en haut de la page */
+    width: 100%; /* S'assure que le header prend toute la largeur de l'écran */
+    z-index: 1000; /* S'assure que le header est au-dessus des autres éléments */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ajoute une ombre subtile pour séparer le header du contenu */
+}

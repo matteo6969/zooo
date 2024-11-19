@@ -1,0 +1,183 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; 
+    padding: 0; 
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #2f5233;
+    color: #ffffff;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed; /* Rend le header toujours visible */
+    top: 0; /* Fixe le header en haut de l'écran */
+    width: 100%; /* Assure que le header couvre toute la largeur */
+    z-index: 1000; /* Place le header au-dessus des autres éléments */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre subtile pour séparation visuelle */
+}
+
+header .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin: 0.5em 0; /* Conserve l'espacement interne des liens */
+}
+
+header .nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.1em;
+}
+
+/* Ajout pour compenser la hauteur du header */
+body {
+    margin-top: 70px; /* Ajustez cette valeur selon la hauteur réelle du header */
+}
+
+/* Carrousel */
+#carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-container {
+    width: 100%; /* Largeur ajustée pour mieux correspondre à l'écran */
+    max-width: auto; /* Limite maximale */
+    height: 700px; /* Hauteur conforme à votre capture d'écran */
+    overflow: hidden;
+    position: relative;
+    border-radius: auto;
+    background-color: #2f5233;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: calc(100% * 5); /* Pour 5 vidéos */
+    margin: 0;
+}
+
+.carousel-slide video {
+    width: 20%; 
+    height: 15%;
+    object-fit: cover; /* Assure que la vidéo remplit le conteneur sans être déformée */
+    flex-shrink: 0;
+}
+
+/* Boutons du carrousel */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 0.5em;
+    border-radius: 50%;
+    z-index: 10;
+    color: #2f5233;
+}
+
+.prev-btn {
+    left: 15px;
+}
+
+.next-btn {
+    right: 15px;
+}
+
+/* Section des boutons */
+#action-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px; /* Monte légèrement pour coller au carrousel */
+    padding: 30px 0;
+    background: rgba(255, 255, 255, 0.8); /* Fond transparent */
+}
+
+.button-container {
+    display: flex;
+    gap: 30px; /* Augmente l'espacement entre les boutons */
+}
+
+.button {
+    background-color: #2f5233; /* Couleur verte */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 20px 40px; /* Augmente la hauteur et la largeur */
+    border-radius: 15px; /* Coins plus arrondis pour un style moderne */
+    font-size: 1.2em; /* Texte légèrement plus grand */
+    transition: background-color 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Ombre plus visible */
+    text-align: center;
+    width: 200px; /* Largeur fixe pour uniformiser */
+    height: 70px; /* Hauteur fixe */
+    display: flex; /* Centre le contenu */
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    background-color: #3a6b41; /* Couleur plus claire au survol */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Ombre accentuée au survol */
+}
+
+/* Section des avis */
+#review-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(47, 82, 51, 0.1); /* Légèrement transparent */
+    text-align: center;
+}
+
+.review-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fond blanc semi-transparent */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-container h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #2f5233;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    resize: none;
+}
+
+.submit-review {
+    background-color: #2f5233;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-review:hover {
+    background-color: #3a6b41;
+}

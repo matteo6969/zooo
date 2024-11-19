@@ -1,0 +1,78 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    margin-top: 70px; /* Compense la hauteur du header fixe */
+}
+
+/* Header global */
+header {
+    background-color: rgba(47, 82, 51, 0.8); /* Vert avec 80% d'opacité */
+    height: 70px; /* Hauteur du header */
+    display: flex; /* Flexbox pour aligner les éléments */
+    align-items: center;
+    padding: 0 2em; /* Espace horizontal */
+    position: fixed; /* Reste en haut au scroll */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Toujours au-dessus */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Conteneur principal du header */
+.header-container {
+    display: flex;
+    align-items: center; /* Centrage vertical */
+    justify-content: flex-start; /* Tout aligne à gauche */
+    width: 100%; /* Prend toute la largeur */
+    gap: 2em; /* Ajoute un espace entre le logo et .nav-links */
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center; /* Centre le logo verticalement */
+    margin-right: 1em; /* Optionnel : espace entre le logo et les liens */
+}
+
+.logo img {
+    height: 120px; /* Augmente la hauteur */
+    width: auto; /* Conserve les proportions */
+    cursor: pointer; /* Pointeur au survol */
+}
+
+/* Navigation principale (liens) */
+.nav-links {
+    list-style: none;
+    display: flex; /* Les liens sont alignés horizontalement */
+    gap: 3em; /* Plus d'espace entre les liens */
+    margin: 0;
+    padding: 0;
+
+    /* Déplace les liens vers la gauche */
+    margin-left: 0;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links li a {
+    font-size: 13px; /* Taille fixe en pixels */
+}
+
+.nav-links a {
+    color: #f0ecdc; /* Couleur du texte */
+    text-decoration: none; /* Supprime le soulignement */
+    font-weight: bold;
+    font-size: 2%;
+    transition: color 0.3s ease;
+    
+}
+
+.nav-links a:hover {
+    color: #a7a876; /* Couleur au survol */
+}

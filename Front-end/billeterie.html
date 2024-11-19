@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billeterie - Parc Animalier de l'ISEN</title>
+    <link rel="stylesheet" href="billeterie.css"> 
+    <style>
+        /* Styles globaux */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+        }
+
+        /* Conteneur principal */
+        .main-container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 100vh; /* Pleine hauteur de la fenêtre */
+        }
+
+        /* Section image */
+        .image-container {
+            width: 50%; /* Prend la moitié de l'écran */
+            background: url('Public/parc-image.jpg') no-repeat center center/cover; /* Image de fond */
+        }
+
+        /* Section modales */
+        .modales-container {
+            width: 50%; /* Prend l'autre moitié de l'écran */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2em;
+            background-color: #f5f5f5;
+        }
+
+        /* Modales */
+        .modale {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2em;
+            margin: 1em 0;
+            width: 80%;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .modale:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .modale h2 {
+            margin: 0 0 1em;
+            font-size: 1.5em;
+            color: #2f5233;
+        }
+
+        .modale p {
+            font-size: 1em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="Accueil.html">
+                    <img src="Public/logo-site.png" alt="Logo Parc Animalier de l'ISEN">
+                </a>
+            </div>
+            <!-- Navigation principale -->
+            <ul class="nav-links">
+                <li><a href="decouvrir.html">Découvrir le Parc</a></li>
+                <li><a href="gestion-biomes.html">Nos Animaux</a></li>
+                <li><a href="services.html">Nos Services</a></li>
+                <li><a href="connexion.html">Inscription</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenu principal -->
+    <div class="main-container">
+        <!-- Section Image -->
+        <div class="image-container"></div>
+
+        <!-- Section Modales -->
+        <div class="modales-container">
+            <!-- Modale 1 -->
+            <div class="modale">
+                <h2>Modale 1</h2>
+                <p>Informations sur l'achat des billets.</p>
+            </div>
+
+            <!-- Modale 2 -->
+            <div class="modale">
+                <h2>Modale 2</h2>
+                <p>Réductions et offres spéciales.</p>
+            </div>
+
+            <!-- Modale 3 -->
+            <div class="modale">
+                <h2>Modale 3</h2>
+                <p>Questions fréquentes et support.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

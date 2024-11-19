@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="carrousel.css">
+    <link rel="stylesheet" href="accueil.css">
+
+</head>
+<body>
+    <header>
+        <nav class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="Accueil.html">
+                    <img src="Public/logo-site.png" alt="Logo Parc Animalier de l'ISEN">
+                </a>
+            </div>
+    
+            <!-- Navigation principale -->
+            <ul class="nav-links">
+                <li><a href="decouvrir.html">Découvrir le Parc</a></li>
+                <li><a href="gestion-biomes.html">Nos Animaux</a></li>
+                <li><a href="services.html">Nos Services</a></li>
+                <li><a href="connexion.html">Inscription</a></li>
+            </ul>
+    
+            <!-- Bouton Billeterie -->
+            <a href="billeterie.html" class="billeterie">
+                <img src="Public/empreinte-de-patte.png" alt="Bonhomme" class="icon"> Billeterie
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Carrousel de vidéos -->
+        <section id="carousel">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <video src="Public/tigre.mp4" muted autoplay loop></video>
+                    <video src="Public/loup.mp4" muted autoplay loop></video>
+                    <video src="Public/elephant.mp4" muted autoplay loop></video>
+                    <video src="Public/flamant.mp4" muted autoplay loop></video>
+                    <video src="Public/lionne.mp4" muted autoplay loop></video>
+                </div>
+                <button class="prev-btn">&#8249;</button>
+                <button class="next-btn">&#8250;</button>
+            </div>
+        </section>
+        <section id="action-buttons">
+            <div class="button-container">
+                <a href="gestion-biomes.html" class="button">Gestion des biomes</a>
+                <a href="services.html" class="button">Liste des services</a>
+                <a href="billeterie.html" class="button">Billeterie</a>
+            </div>
+        </section>
+    
+        <!-- Section Avis -->
+        <section id="review-section">
+            <div class="review-container">
+                <h2>Donnez votre avis sur le parc</h2>
+                <textarea placeholder="Écrivez ici votre avis..."></textarea>
+                <button class="submit-review">Soumettre</button>
+            </div>
+        </section>
+    </main>
+    <script src="carrousel.js"></script>
+</body>
+</html>
