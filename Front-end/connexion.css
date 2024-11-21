@@ -1,57 +1,111 @@
-/* Styles de base */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: #f9f9f9;
     color: #333;
+    margin-top: 70px; 
 }
 
-/* Header et navigation */
 header {
-    background-color: #2f5233;
-    color: #fff;
-    padding: 1em 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-header nav {
-    display: flex;
+    background-color: rgba(47, 82, 51, 0.8); 
+    height: 70px; 
+    display: flex; /* Flexbox pour aligner les éléments */
     align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 1em;
+    padding: 0 2em; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Toujours au-dessus */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.logo h1 {
-    margin: 0;
-    font-size: 1.8em;
-    color: #f0ecdc;
+.header-container {
+    display: flex;
+    align-items: center; /* Centrage vertical */
+    justify-content: flex-start; /* Tout aligne à gauche */
+    width: 100%; 
+    gap: 2em; 
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center; /* Centre le logo verticalement */
+    margin-right: 1em; 
+}
+
+.logo img {
+    height: 120px; 
+    width: auto; 
+    cursor: pointer; /* Pointeur au survol */
 }
 
 .nav-links {
     list-style: none;
-    display: flex;
-    gap: 1.5em;
+    display: flex; /* Les liens sont alignés horizontalement */
+    gap: 3em; 
     margin: 0;
     padding: 0;
+    margin-left: 0;
+}
+
+.nav-links li {
+    margin: 0;
 }
 
 .nav-links li a {
-    color: #f0ecdc;
-    text-decoration: none;
+    font-size: 13px; /* Taille fixe en pixels */
+}
+
+.nav-links a {
+    color: #f0ecdc; 
+    text-decoration: none; /* Supprime le soulignement */
     font-weight: bold;
-    padding: 0.5em 1em;
+    font-size: 2%;
+    transition: color 0.3s ease;
+    
+}
+
+
+.nav-links a:hover {
+    color: #a7a876; /* Couleur au survol */
+}
+
+.Inscription {
+    display: flex; /* Aligne l'icône et le texte en ligne */
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre le contenu horizontalement */
+    background-color: #ffbd59b8; 
+    color: #fff; 
+    padding: 0.5em 1.5em;
+    border: none;
     border-radius: 5px;
-    transition: background 0.3s ease;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: auto; 
+    margin-right: 3em; 
 }
 
-.nav-links li a:hover {
-    background: #8e8c64;
+.Inscription:hover {
+    background-color: #8ca24e;
+    color: #fff;
 }
 
-/* Section Connexion */
+.Inscription .icon {
+    width: 14px; 
+    height: auto; /* Conserve les proportions */
+    margin-right: 8px; 
+}
+
+.Inscription i {
+    margin-right: 8px; 
+    font-size: 1.2em;
+}
+
 .login-section {
     max-width: 400px;
     margin: 5em auto;
@@ -60,6 +114,7 @@ header nav {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin-top: 12%;
 }
 
 .login-section h2 {
