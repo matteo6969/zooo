@@ -79,7 +79,7 @@ header {
 }
 
 /* Bouton Billeterie */
-.billeterie {
+.Inscription {
     display: flex; /* Aligne l'icône et le texte en ligne */
     align-items: center; /* Centre verticalement */
     justify-content: center; /* Centre le contenu horizontalement */
@@ -96,59 +96,22 @@ header {
     margin-left: 40%;
 }
 
-.billeterie:hover {
+.Inscription:hover {
     background-color: #8ca24e;
     color: #fff;
 }
 
-.billeterie .icon {
+.Inscription .icon {
     width: 16px; /* Ajuste la taille de l'icône */
     height: auto; /* Conserve les proportions */
     margin-right: 8px; /* Ajoute un espace entre l'icône et le texte */
 }
 
-.billeterie i {
+.Inscription i {
     margin-right: 8px; /* Espace entre l'icône et le texte */
     font-size: 1.2em; /* Taille de l'icône */
 }
-/* Navigation */
 
-
-/* Hero Section */
-.hero-section {
-    background-image: url('images/hero-background.jpg'); /* Mettez une image d'arrière-plan appropriée */
-    background-size: cover;
-    background-position: center;
-    padding: 8em 1em;
-    color: #fff;
-    text-align: center;
-}
-
-.hero-section .hero-content h2 {
-    font-size: 2.5em;
-    margin: 0.5em 0;
-}
-
-.hero-section .hero-content p {
-    max-width: 600px;
-    margin: auto;
-    line-height: 1.6;
-}
-
-.btn {
-    display: inline-block;
-    background-color: #475429;
-    color: #fff;
-    padding: 0.8em 1.2em;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 1em;
-}
-
-.btn:hover {
-    background-color: #a7a876;
-}
 
 /* Sections */
 .section {
