@@ -3,34 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le Belvédère</title>
+    <title>Le Belvédère - Parc Animalier</title>
     <link rel="stylesheet" href="Le-belvedere.css">
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="header-container">
             <div class="logo">
-                <a href="Accueil.html" style="text-decoration: none;">
-                    <h1>Parc Animalier de l'ISEN</h1>
+                <a href="Accueil.html">
+                    <img src="Public/logo-site.png" alt="Logo Parc Animalier de l'ISEN">
                 </a>
             </div>
+    
             <ul class="nav-links">
-                <li><a href="#discover">Découvrir le Parc</a></li>
-                <li><a href="#animals">Nos Animaux</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="connexion.html">Inscription</a></li>
+                <li><a href="decouvrir.html">Découvrir le Parc</a></li>
+                <li><a href="gestion-biomes.html">Les biomes</a></li>
+                <li><a href="animaux.html">Animaux</a></li>
+                <li><a href="services.html">Nos Services</a></li>
+                <li><a href="billeterie.html">Billeterie</a></li>
             </ul>
+    
+            <a href="Connexion.html" class="Inscription">
+                <img src="Public/empreinte-de-patte.png" alt="PatteChat" class="icon"> Inscription
+            </a>
         </nav>
     </header>
-    <main>
-        <h2>Le Belvédère</h2>
-        <p>Découvrez les enclos et les animaux du Belvédère :</p>
-        <ul>
-            <li>Rhinocéros</li>
-            <li>Suricates</li>
-            <li>Tapirs</li>
-            <!-- Ajoutez plus d'animaux ici -->
-        </ul>
+    <main class="belvedere-container">
+        <section class="intro-section">
+            <h1>Bienvenue dans le Biome "Le Belvédère"</h1>
+            <p>Souhaitez-vous découvrir les animaux qui se cachent derrière les enclos du biome Belvédère ? Explorez les enclos pour rencontrer nos animaux fascinants.</p>
+        </section>
+
+        <section class="enclos-list">
+            <div class="enclos">
+                <img src="Public/enclos-belvedere.jpg" alt="Enclos A">
+                <h3>Enclos A</h3>
+                <p>In process</p>
+                <a href="belvedere-enclosA.html" class="button"></a>
+            </div>
+            <div class="enclos">
+                <img src="Public/enclos-belvedere.jpg" alt="Enclos B">
+                <h3>Enclos B</h3>
+                <p>In process</p>
+            </div>
+            <div class="enclos">
+                <img src="Public/enclos-belvedere.jpg" alt="Enclos C">
+                <h3>Enclos C</h3>
+                <p>In process</p>
+            </div>
+            <div class="enclos">
+                <img src="Public/enclos-belvedere.jpg" alt="Enclos D">
+                <h3>Enclos D</h3>
+                <p>In process</p>
+            </div>
+            <div class="enclos">
+                <img src="Public/enclos-belvedere.jpg" alt="Enclos E">
+                <h3>Enclos E</h3>
+                <p>In process</p>
+            </div>
+            <div class="enclos">
+                <img src="Public/enclos-belvedere.jpg" alt="Enclos F">
+                <h3>Enclos F</h3>
+                <p>In process</p>
+            </div>
+            <div class="enclos">
+                <img src="Public/enclos-belvedere.jpg" alt="Enclos G">
+                <h3>Enclos G</h3>
+                <p>In process</p>
+            </div>
+        </section>
     </main>
 </body>
 </html>
