@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion - Parc Animalier de l'ISEN</title>
-    <link rel="stylesheet" href="connexion.css"> <!-- Nouveau fichier CSS -->
+    <link rel="stylesheet" href="connexion.css"> 
 </head>
 <body>
     <div class="background-image">
@@ -12,18 +11,24 @@
     </div>
 
     <header>
-        <nav>
+        <nav class="header-container">
             <div class="logo">
-                <a href="Accueil.html" style="text-decoration: none;">
-                    <h1>Parc Animalier de l'ISEN</h1>
+                <a href="Accueil.html">
+                    <img src="Public/logo-site.png" alt="Logo Parc Animalier de l'ISEN">
                 </a>
             </div>
+    
             <ul class="nav-links">
-                <li><a href="Decouvrir.html">Découvrir le Parc</a></li>
-                <li><a href="gestion-biomes.html">Nos Animaux</a></li>
+                <li><a href="decouvrir.html">Découvrir le Parc</a></li>
+                <li><a href="gestion-biomes.html">Les biomes</a></li>
+                <li><a href="animaux.html">Animaux</a></li>
                 <li><a href="services.html">Nos Services</a></li>
-                <li><a href="connexion.html">Inscription</a></li>
+                <li><a href="billeterie.html">Billeterie</a></li>
             </ul>
+    
+            <a href="Connexion.html" class="Inscription">
+                <img src="Public/empreinte-de-patte.png" alt="PatteChat" class="icon"> Inscription
+            </a>
         </nav>
     </header>
 
@@ -44,7 +49,5 @@
             </form>
         </section>
     </main>
-
-
 </body>
 </html>
