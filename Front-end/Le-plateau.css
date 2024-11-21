@@ -1,0 +1,181 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    margin-top: 70px; 
+}
+
+header {
+    background-color: rgba(47, 82, 51, 0.8); 
+    height: 70px; 
+    display: flex; /* Flexbox pour aligner les éléments */
+    align-items: center;
+    padding: 0 2em; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Toujours au-dessus */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    display: flex;
+    align-items: center; /* Centrage vertical */
+    justify-content: flex-start; /* Tout aligne à gauche */
+    width: 100%; 
+    gap: 2em; 
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center; /* Centre le logo verticalement */
+    margin-right: 1em; 
+}
+
+.logo img {
+    height: 120px; 
+    width: auto; 
+    cursor: pointer; /* Pointeur au survol */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex; /* Les liens sont alignés horizontalement */
+    gap: 3em; 
+    margin: 0;
+    padding: 0;
+    margin-left: 0;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links li a {
+    font-size: 13px; /* Taille fixe en pixels */
+}
+
+.nav-links a {
+    color: #f0ecdc; 
+    text-decoration: none; /* Supprime le soulignement */
+    font-weight: bold;
+    font-size: 2%;
+    transition: color 0.3s ease;
+    
+}
+
+
+.nav-links a:hover {
+    color: #a7a876; /* Couleur au survol */
+}
+
+.Inscription {
+    display: flex; /* Aligne l'icône et le texte en ligne */
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre le contenu horizontalement */
+    background-color: #ffbd59b8; /* Fond bouton */
+    color: #fff; /* Texte bouton */
+    padding: 0.5em 1.5em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: auto; /* Pousse le bouton vers la droite */
+    margin-right: 3em; /* Ajoute un espace fixe entre le bouton et le bord droit */
+}
+
+.Inscription:hover {
+    background-color: #8ca24e;
+    color: #fff;
+}
+
+.Inscription .icon {
+    width: 14px; /* Ajuste la taille de l'icône */
+    height: auto; /* Conserve les proportions */
+    margin-right: 8px; /* Ajoute un espace entre l'icône et le texte */
+}
+
+.Inscription i {
+    margin-right: 8px; /* Espace entre l'icône et le texte */
+    font-size: 1.2em; /* Taille de l'icône */
+}
+
+
+/* Conteneur principal */
+.plateau-container {
+    margin-top: 90px; /* Compense la hauteur du header fixe */
+    padding: 2em;
+}
+
+
+/* Section d'introduction */
+.intro-section {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.intro-section h1 {
+    font-size: 2.5em;
+    color: #2f5233;
+}
+
+.intro-section p {
+    font-size: 1.2em;
+    color: #666;
+    margin-top: 0.5em;
+}
+
+/* Liste des enclos */
+.enclos-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+
+.enclos-link {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: inherit; /* Garde la couleur du texte */
+    display: block; /* Le lien englobe tout le conteneur */
+}
+
+.enclos {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Indique que le conteneur est cliquable */
+}
+
+.enclos img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.enclos h3 {
+    font-size: 1.5em;
+    color: #2f5233;
+}
+
+.enclos p {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.enclos:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
