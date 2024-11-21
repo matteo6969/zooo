@@ -3,105 +3,199 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     color: #333;
 }
 
 /* Header et navigation */
+/* Header global */
 header {
-    background-color: #475429;
-    color: #ffffff74;
-    padding: 1em 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-header nav {
-    display: flex;
+    background-color: rgba(47, 82, 51, 0.8); /* Vert avec 80% d'opacité */
+    height: 70px; /* Hauteur du header */
+    display: flex; /* Flexbox pour aligner les éléments */
     align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 1em;
+    padding: 0 2em; /* Espace horizontal */
+    position: fixed; /* Reste en haut au scroll */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Toujours au-dessus */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.logo h1 {
-    margin: 0;
-    font-size: 1.8em;
-    color: #f0ecdc;
+/* Conteneur principal du header */
+.header-container {
+    display: flex;
+    align-items: center; /* Centrage vertical */
+    justify-content: flex-start; /* Tout aligne à gauche */
+    width: 100%; /* Prend toute la largeur */
+    gap: 2em; /* Ajoute un espace entre le logo et .nav-links */
 }
 
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center; /* Centre le logo verticalement */
+    margin-right: 1em; /* Optionnel : espace entre le logo et les liens */
+}
+
+.logo img {
+    height: 120px; /* Augmente la hauteur */
+    width: auto; /* Conserve les proportions */
+    cursor: pointer; /* Pointeur au survol */
+}
+
+/* Navigation principale (liens) */
 .nav-links {
     list-style: none;
-    display: flex;
-    gap: 1.5em;
+    display: flex; /* Les liens sont alignés horizontalement */
+    gap: 2em; /* Plus d'espace entre les liens */
     margin: 0;
     padding: 0;
+
+    /* Déplace les liens vers la gauche */
+    margin-left: 0;
 }
 
-.nav-links li a, .map-button {
-    color: #f0ecdc;
-    text-decoration: none;
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links li a {
+    font-size: 13px; /* Taille fixe en pixels */
+}
+
+.nav-links a {
+    color: #f0ecdc; /* Couleur du texte */
+    text-decoration: none; /* Supprime le soulignement */
     font-weight: bold;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    transition: background 0.3s ease;
+    font-size: 2%;
+    transition: color 0.3s ease;
+    
 }
 
-.map-button {
-    background: #a7a876;
+
+.nav-links a:hover {
+    color: #a7a876; /* Couleur au survol */
+}
+
+/* Bouton Billeterie */
+.Inscription {
+    display: flex; /* Aligne l'icône et le texte en ligne */
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre le contenu horizontalement */
+    background-color: #ffbd59b8; /* Fond bouton */
+    color: #fff; /* Texte bouton */
+    padding: 0.5em 1.5em;
     border: none;
-    color: #fff;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 40%;
 }
 
-.nav-links li a:hover, .map-button:hover {
-    background: #8e8c64;
+.Inscription:hover {
+    background-color: #8ca24e;
+    color: #fff;
 }
 
-h2 {
-    text-align: center;
-    margin: 20px 0;
-    font-size: 1.8em;
-    color: #2f5233;
+.Inscription .icon {
+    width: 16px; /* Ajuste la taille de l'icône */
+    height: auto; /* Conserve les proportions */
+    margin-right: 8px; /* Ajoute un espace entre l'icône et le texte */
 }
 
-/* Container des biomes */
-.biomes-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Trois colonnes */
-    gap: 20px; /* Espacement entre les cartes */
-    max-width: 1000px;
-    margin: 0 auto; /* Centre le contenu */
-    padding: 20px;
+.Inscription i {
+    margin-right: 8px; /* Espace entre l'icône et le texte */
+    font-size: 1.2em; /* Taille de l'icône */
+}
+/* Section Bannière */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
 }
 
-/* Cartes de chaque biome */
-.biome-card {
+.hero-image {
+    width: 100%;
+    height: 100%;
+    background: url('Public/parc.jpeg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.2em;
     text-align: center;
-    border-radius: 15px;
-    padding: 40px 20px; /* Dimensions des cartes */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ajoute une ombre */
+}
+
+.hero-text {
+    font-family: Montserrat, sans-serif;
+    color: #2f5233;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin-top: 140px;
+}
+
+/* Titre principal */
+.section-title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.5em;
+    color: #2f5233;
+}
+
+/* Conteneur des biomes */
+.biomes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Deux colonnes flexibles */
+    gap: 40px; /* Espace entre les cartes */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Carte de biome */
+.biome-card {
+    text-align: center; /* Aligne tout au centre */
+    background-color: #f9f9f9; /* Fond clair */
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.biome-card:hover {
-    transform: translateY(-5px); /* Légère élévation au survol */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Ombre accentuée */
+/* Image des biomes */
+.biome-card img {
+    width: 100%; /* S'adapte à la largeur de la carte */
+    height: auto; /* Conserve les proportions */
+    border-radius: 10px; /* Coins arrondis */
+    margin-bottom: 15px;
 }
-header {
-    background-color: #2f5233; /* Couleur de fond */
-    color: #ffffff; /* Couleur du texte */
-    text-align: center;
-    padding: 1em 0;
-    position: fixed; /* Rend le header toujours visible */
-    top: 0; /* Fixe le header en haut de la page */
-    width: 100%; /* S'assure que le header prend toute la largeur de l'écran */
-    z-index: 1000; /* S'assure que le header est au-dessus des autres éléments */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ajoute une ombre subtile pour séparer le header du contenu */
+
+/* Titre des biomes */
+.biome-card h3 {
+    font-size: 1.5em; /* Taille du titre */
+    color: #2f5233; /* Couleur du texte */
+    margin: 15px 0 10px; /* Espacement autour du titre */
+    font-weight: bold;
+}
+
+/* Description des biomes */
+.biome-card p {
+    font-size: 1em; /* Taille du texte */
+    color: #555; /* Couleur gris clair */
+    line-height: 1.6; /* Espacement entre les lignes */
+    margin: 0;
+}
+
+/* Effet au survol */
+.biome-card:hover {
+    transform: translateY(-10px); /* Légère élévation */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
 }
