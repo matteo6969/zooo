@@ -1,4 +1,3 @@
-/* Style général */
 body {
     font-family: Arial, sans-serif;
     margin: 0; 
@@ -11,9 +10,9 @@ header {
     color: #ffffff;
     text-align: center;
     padding: 1em 0;
-    position: fixed; /* Rend le header toujours visible */
-    top: 0; /* Fixe le header en haut de l'écran */
-    width: 100%; /* Assure que le header couvre toute la largeur */
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
     z-index: 1000; /* Place le header au-dessus des autres éléments */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre subtile pour séparation visuelle */
 }
@@ -33,10 +32,9 @@ header .nav-links a {
 
 /* Ajout pour compenser la hauteur du header */
 body {
-    margin-top: 70px; /* Ajustez cette valeur selon la hauteur réelle du header */
+    margin-top: 70px; 
 }
 
-/* Carrousel */
 #carousel {
     display: flex;
     justify-content: center;
@@ -48,9 +46,9 @@ body {
 }
 
 .carousel-container {
-    width: 100%; /* Largeur ajustée pour mieux correspondre à l'écran */
-    max-width: auto; /* Limite maximale */
-    height: 700px; /* Hauteur conforme à votre capture d'écran */
+    width: 100%; 
+    max-width: auto; 
+    height: 700px; 
     overflow: hidden;
     position: relative;
     border-radius: auto;
@@ -61,7 +59,7 @@ body {
 .carousel-slide {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: calc(100% * 5); /* Pour 5 vidéos */
+    width: calc(100% * 5); 
     margin: 0;
 }
 
@@ -72,7 +70,6 @@ body {
     flex-shrink: 0;
 }
 
-/* Boutons du carrousel */
 .prev-btn, .next-btn {
     position: absolute;
     top: 50%;
@@ -95,14 +92,13 @@ body {
     right: 15px;
 }
 
-/* Section des boutons */
 #action-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -50px; /* Monte légèrement pour coller au carrousel */
+    margin-top: -50px; 
     padding: 30px 0;
-    background: rgba(255, 255, 255, 0.8); /* Fond transparent */
+    background: rgba(255, 255, 255, 0.8); 
 }
 
 .button-container {
@@ -111,32 +107,31 @@ body {
 }
 
 .button {
-    background-color: #2f5233; /* Couleur verte */
+    background-color: #2f5233; 
     color: #ffffff;
     text-decoration: none;
     padding: 20px 40px; /* Augmente la hauteur et la largeur */
-    border-radius: 15px; /* Coins plus arrondis pour un style moderne */
-    font-size: 1.2em; /* Texte légèrement plus grand */
+    border-radius: 15px; 
+    font-size: 1.2em; 
     transition: background-color 0.3s ease;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Ombre plus visible */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
     text-align: center;
-    width: 200px; /* Largeur fixe pour uniformiser */
-    height: 70px; /* Hauteur fixe */
+    width: 200px;
+    height: 70px;
     display: flex; /* Centre le contenu */
     justify-content: center;
     align-items: center;
 }
 
 .button:hover {
-    background-color: #3a6b41; /* Couleur plus claire au survol */
+    background-color: #3a6b41; 
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Ombre accentuée au survol */
 }
 
-/* Section des avis */
 #review-section {
     margin-top: 20px;
     padding: 20px;
-    background-color: rgba(47, 82, 51, 0.1); /* Légèrement transparent */
+    background-color: rgba(47, 82, 51, 0.1); 
     text-align: center;
 }
 
@@ -146,7 +141,7 @@ body {
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.9); /* Fond blanc semi-transparent */
+    background-color: rgba(255, 255, 255, 0.9); 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
