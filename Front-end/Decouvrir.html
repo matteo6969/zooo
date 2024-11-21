@@ -4,31 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parc Animalier de l'ISEN</title>
-    <link rel="stylesheet" href="decouvrir.css"> <!-- Nouveau fichier CSS -->
-</head>
+    <link rel="stylesheet" href="decouvrir.css">
 <body>
     <header>
-        <nav>
+        <nav class="header-container">
             <div class="logo">
-                <a href="Accueil.html" style="text-decoration: none;">
-                    <h1>Parc Animalier de l'ISEN</h1>
+                <a href="Accueil.html">
+                    <img src="Public/logo-site.png" alt="Logo Parc Animalier de l'ISEN">
                 </a>
             </div>
+    
             <ul class="nav-links">
-                <li><a href="Decouvrir.html">Découvrir le Parc</a></li>
-                <li><a href="gestion-biomes.html">Nos Animaux</a></li>
+                <li><a href="decouvrir.html">Découvrir le Parc</a></li>
+                <li><a href="gestion-biomes.html">Les biomes</a></li>
+                <li><a href="animaux.html">Animaux</a></li>
                 <li><a href="services.html">Nos Services</a></li>
-                <li><a href="connexion.html">Inscription</a></li>
+                <li><a href="billeterie.html">Billeterie</a></li>
             </ul>
+            <a href="Connexion.html" class="Inscription">
+                <img src="Public/empreinte-de-patte.png" alt="PatteChat" class="icon"> Inscription
+            </a>
         </nav>
     </header>
-    <main>
-        <section id="parc-plan">
-            <div class="background-image">
-                <img src="Public/parc-plan.jpeg" alt="Plan du parc">
-            </div>
-        </section>
-    </main>
+
+    <script src="Public/imageMapResizer.min.js"></script>
+    <script src="decouvrir.js"></script>
+    <main>       
+
+        <img usemap="#europe_map" src="Public/parc-plan.jpeg" alt="Carte du Zoo" />
+          
+        <map name="europe_map">
+            <area
+                shape="poly"
+                coords="1400,78,1345,15,1307,0,1234,0,1186,35,1140,33,1117,83,1026,119,1006,151,819,162,721,212,647,285,627,323,617,366,650,442,677,453,695,468,741,475,776,516,761,572,945,502,948,447,988,429,1019,431,1039,439,1064,469,1115,485,1130,479,1155,462,1271,437,1342,386,1393,335,1428,284,1451,249,1479,231,1501,216,1408,140"
+                href="Le-belvedere.html"
+                target="_blank"
+                rel="nofollow noreferrer noopener"
+                alt="Le Belvédère"
+                title="Ouvrir le biome Belvédère"
+            />
+            <area
+                shape="poly"
+                coords="621,325,626,308,497,444,507,533,568,642,666,804,750,893,785,915,947,969,1081,1045,1175,1162,1235,1197,1380,1220,1406,1230,1479,1306,1684,1152,1724,1142,1800,1137,1777,1011,1800,889,1765,887,1684,803,1590,771,1540,763,1509,796,1434,821,1398,846,1386,862,1355,872,1340,932,1229,925,1183,915,1171,877,1097,859,1047,816,933,774,865,726,797,721,729,643,774,633,757,568,769,517,736,477,693,469,648,444,612,363"
+                href="La-vallon-des-cascades.html"
+                target="_blank"
+                rel="nofollow noreferrer noopener"
+                alt="La vallon des cascades"
+                title="Ouvrir le biome vallon des cascades"
+            />
+            <area
+                shape="poly"
+                coords="1806,364,1780,375,1740,370,1707,352,1692,332,1644,332,1608,304,1601,289,1563,254,1525,238,1520,216,1502,218,1454,246,1393,337,1353,383,1324,422,1263,450,1158,470,1134,493,1061,480,1030,442,990,440,969,446,956,453,956,476,956,509,939,517,921,524,931,521,916,523,896,533,878,544,857,554,832,565,807,575,772,585,782,635,741,648,757,671,779,691,798,718,871,723,932,771,1056,817,1096,857,1174,875,1187,908,1233,905,1245,920,1331,925,1341,875,1374,854,1414,817,1495,791,1536,753,1589,756,1713,811,1725,753,1690,710,1682,662,1650,597,1662,554,1690,518,1743,495,1753,461,1761,428,1778,410,1796,390,1799,372"
+                href="Le-plateau.html"
+                target="_blank"
+                rel="nofollow noreferrer noopener"
+                alt="Le Plateau"
+                title="Ouvrir le biome plateau"
+            />
+            <area
+                shape="poly"
+                coords="1836,348,1808,358,1800,383,1788,406,1765,429,1750,485,1745,502,1697,522,1669,558,1664,613,1689,656,1697,702,1735,747,1719,818,1810,879,1842,929,1888,944,1989,936,2136,934,2184,959,2227,949,2267,913,2302,850,2280,749,2330,705,2391,690,2441,700,2520,690,2563,751,2606,746,2666,703,2712,715,2755,700,2805,607,2828,501,2805,412,2765,377,2679,364,2457,407,2286,413,2197,438,2174,390,2076,352,1890,337"
+                href="Les-clairières.html"
+                target="_blank"
+                rel="nofollow noreferrer noopener"
+                alt="Les clarières"
+                title="Ouvrir le biome clairières"
+            />
+            <area
+                shape="poly"
+                coords="1801,893,1782,1007,1802,1136,2040,1128,2376,1035,2553,1058,2616,1052,2664,1017,2698,959,2754,709,2711,719,2668,706,2607,752,2552,759,2516,699,2471,714,2446,711,2393,696,2317,726,2289,754,2309,845,2276,913,2223,961,2183,969,2135,946,2107,941,2034,946,2019,936,1882,949,1837,931,1816,896"
+                href="Le-bois-des-pins.html"
+                target="_blank"
+                rel="nofollow noreferrer noopener"
+                alt="Le bois des pins"
+                title="Ouvrir le biome bois des pins"
+
+            />
+            <area
+                shape="poly"
+                coords="56,805,211,706,292,829,275,842,286,866,152,950"
+                href="la-bergerie-des-reptiles.html"
+                target="_blank"
+                rel="nofollow noreferrer noopener"
+                alt="La bergerie des reptiles"
+                title="Ouvrir le biome bergerie des reptiles"
+
+            />
+        </map>
+    </main> 
 </body>
 </html>
-
