@@ -1,0 +1,117 @@
+/* Style global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: rgba(47, 82, 51, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 2em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo img {
+    height: 50px;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+}
+
+.nav-links a {
+    color: #f0ecdc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #a7a876;
+}
+
+/* Conteneur principal */
+.enclos-container {
+    margin-top: 90px; /* Compense la hauteur du header fixe */
+    padding: 2em;
+}
+
+/* Section d'introduction */
+.intro-section {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.intro-section h1 {
+    font-size: 2.5em;
+    color: #2f5233;
+}
+
+.intro-section p {
+    font-size: 1.2em;
+    color: #666;
+    margin-top: 0.5em;
+}
+
+/* Liste des animaux */
+.animal-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+
+.animal {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1em;
+}
+
+.animal img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 1em;
+}
+
+.animal h3 {
+    font-size: 1.5em;
+    color: #2f5233;
+    margin: 0.5em 0;
+}
+
+.animal p {
+    font-size: 1em;
+    color: #666;
+    padding: 0 1em;
+}
+
+.animal:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
