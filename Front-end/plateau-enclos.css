@@ -5,7 +5,6 @@ body{
     color: #eee;
     font-family: Poppins;
     font-size: 12px;
-
 }
 a{
     text-decoration: none;
@@ -19,23 +18,22 @@ header{
     align-items: center;
     position: relative;
     z-index: 100;
-
 }
 header a{
-    color: #000;
+    color: #eee;
     margin-right: 40px;
-
 }
+
 /* carousel */
 .carousel{
     height: 100vh;
-    margin-top: -50px;
+    margin-top: 0px;
     width: 100vw;
-    overflow: visible;
+    overflow: hidden;
     position: relative;
 }
 .carousel .list .item{
-    width: 160%;
+    width: 100%;
     height: 100%;
     position: absolute;
     inset: 0 0 0 0;
@@ -46,7 +44,7 @@ header a{
     object-fit: cover;
 }
 .carousel .list .item .content{
-    position: fixed;
+    position: absolute;
     top: 20%;
     width: 1140px;
     max-width: 80%;
@@ -54,81 +52,32 @@ header a{
     transform: translateX(-50%);
     padding-right: 30%;
     box-sizing: border-box;
-    color: #D4A498;
+    color: #fff;
     text-shadow: 0 5px 10px #0004;
 }
-
 .carousel .list .item .author{
     font-weight: bold;
     letter-spacing: 10px;
 }
-.carousel .list .item .title{
+.carousel .list .item .topic{
     font-size: 5em;
     font-weight: bold;
     line-height: 1.3em;
+    color: #f1683a;
 }
-.carousel .list .item .title{
-    color: #D4A498;
-}
-.carousel .list .item .buttons{
-    display: grid;
-    grid-template-columns: repeat(2, 130px);
-    grid-template-rows: 40px;
-    gap: 5px;
-    margin-top: 20px;
-}
-.carousel .list .item .buttons button{
-    border: none;
-    background-color: #eee;
-    letter-spacing: 3px;
-    font-family: Poppins;
-    font-weight: 500;
-}
-
-/* thumbail */
-.thumbnail{
-    position: absolute;
-    bottom: 50px;
-    left: 10%;
-    width: max-content;
-    z-index: 100;
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-}
-
-.thumbnail::-webkit-scrollbar{
-    width: 0;
-}
-
-.thumbnail .item{
-    width: 150px;
-    height: 220px;
-    flex-shrink: 0;
+.carousel .list .item .fiche{
+    color: #f1683a; 
+    font-size: 1.2em; 
+    font-weight: bold;
+    line-height: 1.6; 
+    margin-top: 260px; 
+    padding: 10px; 
     position: relative;
-}
-.thumbnail .item img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-}
-.thumbnail .item .content{
-    color: #eee;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-}
-.thumbnail .item .content .title{
-    font-weight: 500;
-}
-.thumbnail .item .content .description{
-    font-weight: 300;
-}
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5); 
 
 
+}
 /* animation */
 .carousel .list .item:nth-child(1){
     z-index: 1;
@@ -138,8 +87,9 @@ header a{
 
 .carousel .list .item:nth-child(1) .content .author,
 .carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
 .carousel .list .item:nth-child(1) .content .des,
-.carousel .list .item:nth-child(1) .content .buttons
+.carousel .list .item:nth-child(1) .content .fiche
 {
     transform: translateY(50px);
     filter: blur(20px);
@@ -156,15 +106,12 @@ header a{
 .carousel .list .item:nth-child(1) .content .title{
     animation-delay: 1.2s!important;
 }
+.carousel .list .item:nth-child(1) .content .topic{
+    animation-delay: 1.4s!important;
+}
 .carousel .list .item:nth-child(1) .content .des{
     animation-delay: 1.6s!important;
 }
-.carousel .list .item:nth-child(1) .content .buttons{
-    animation-delay: 1.8s!important;
-}
-
-
-.carousel .list .item .des{ 
-    color : #eee;
-
+.carousel .list .item:nth-child(1) .content .fiche{
+    animation-delay: 1.6s!important;
 }

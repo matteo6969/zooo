@@ -1,83 +1,184 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion des Biomes - Parc Animalier de l'ISEN</title>
-    <link rel="stylesheet" href="gestion-biomes.css"> 
+    <title>ISEN'ZOO</title>
+    <link rel="stylesheet" href="gestion-biomes.css">
 </head>
 <body>
     <header>
-        <nav class="header-container">
-            <div class="logo">
-                <a href="Accueil.html">
-                    <img src="Public/logo-site.png" alt="Logo Parc Animalier de l'ISEN">
-                </a>
-            </div>
-    
-            <ul class="nav-links">
-                <li><a href="decouvrir.html">Découvrir le Parc</a></li>
-                <li><a href="gestion-biomes.html">Les biomes</a></li>
-                <li><a href="animaux.html">Animaux</a></li>
-                <li><a href="services.html">Nos Services</a></li>
-                <li><a href="billeterie.html">Billeterie</a></li>
-            </ul>
+        <nav>
+            <a href="decouvrir.html">Découvrir le Parc</a>
+            <a href="gestion-biomes.html">Les biomes</a>
+            <a href="animaux.html">Animaux</a>
+            <a href="services.html">Nos Services</a>
+            <a href="billeterie.html">Billeterie</a>
+            <a href="Connexion.html">Inscription</a>
         </nav>
     </header>
 
-    <section class="hero-section">
-        <div class="hero-image">
-            <div class="hero-text">
-                <p>CINQ BIOMES A EXPLORER</p>
+    <!-- carousel -->
+    <div class="carousel">
+        <!-- list item -->
+        <div class="list">
+            <div class="item">
+                <img src="Public/belvedere.jpg">
+                <div class="content">
+                    <div class="author">LES BIOMES D'ISEN'ZOO</div>
+                    <div class="title">Biome n°1</div>
+                    <div class="topic">Le Belvédère</div>
+                    <div class="des">
+                        Découvrez un point de vue spectaculaire sur les écosystèmes environnants et la vie animale.
+                    </div>
+                    <div class="buttons">
+                        <a href="Le-belvedere.html">
+                            <button>VOIR ENCLOS</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="Public/clairiere.png">
+                <div class="content">
+                    <div class="author">LES BIOMES D'ISEN'ZOO</div>
+                    <div class="title">Biome n°2</div>
+                    <div class="topic">Les Clairères</div>
+                    <div class="des">
+                        Les clairières vous offrent un aperçu des écosystèmes ouverts avec une flore et faune diversifiées.
+                    </div>
+                    <div class="buttons">
+                        <a href="Les-clairieres.html">
+                            <button>VOIR ENCLOS</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="Public/Le-plateau/plateau.jpg">
+                <div class="content">
+                    <div class="author">LES BIOMES D'ISEN'ZOO</div>
+                    <div class="title">Biome n°3</div>
+                    <div class="topic">Le Plateau</div>
+                    <div class="des">
+                        Un habitat sec et rocheux où évoluent des espèces adaptées aux conditions extrêmes.
+                    </div>
+                    <div class="buttons">
+                        <a href="Le-plateau.html">
+                            <button>VOIR ENCLOS</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="Public/vallon-cascade.png">
+                <div class="content">
+                    <div class="author">LES BIOMES D'ISEN'ZOO</div>
+                    <div class="title">Biome n°4</div>
+                    <div class="topic">La Vallon des Cascades</div>
+                    <div class="des">
+                        Explorez un univers aquatique où la faune aquatique et terrestre se rencontre.
+                    </div>
+                    <div class="buttons">
+                        <a href="La-vallon-des-cascades.html">
+                            <button>VOIR ENCLOS</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="Public/bois-des-pins.jpg">
+                <div class="content">
+                    <div class="author">LES BIOMES D'ISEN'ZOO</div>
+                    <div class="title">Biome n°5</div>
+                    <div class="topic">Le Bois des Pins</div>
+                    <div class="des">
+                        Promenez-vous dans une forêt dense abritant de nombreuses espèces d’oiseaux et mammifères.
+                    </div>
+                    <div class="buttons">
+                        <a href="Le-bois-des-pins.html">
+                            <button>VOIR ENCLOS</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="Public/bergerie-reptile.jpg">
+                <div class="content">
+                    <div class="author">LES BIOMES D'ISEN'ZOO</div>
+                    <div class="title">Biome n°6</div>
+                    <div class="topic">La Bergerie des Reptiles</div>
+                    <div class="des">
+                        Un habitat chaud et humide où vous pourrez observer des reptiles fascinants.
+                    </div>
+                    <div class="buttons">
+                        <a href="la-bergerie-des-reptiles.html">
+                            <button>VOIR ENCLOS</button>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
-
-    <main>
-        <div class="biomes-container">
-            <a href="Le-belvedere.html" class="biome-card-link">
-                <div class="biome-card">
-                    <img src="Public/belvedere.jpg" alt="Le Belvédère">
-                    <h3>Le Belvédère</h3>
-                    <p>Découvrez un point de vue spectaculaire sur les écosystèmes environnants et la vie animale.</p>
+        <!-- list thumnail -->
+        <div class="thumbnail">
+            <div class="item">
+                <img src="Public/belvedere.jpg">
+                <div class="content">
+                    <div class="title">
+                        Le Belvedere
+                    </div>
                 </div>
-            </a>
-            <a href="Les-clairieres.html" class="biome-card-link">
-                <div class="biome-card">
-                    <img src="Public/clairiere.png" alt="Les Clairières">
-                    <h3>Les Clairières</h3>
-                    <p>Les clairières vous offrent un aperçu des écosystèmes ouverts avec une flore et faune diversifiées.</p>
+            </div>
+            <div class="item">
+                <img src="Public/clairiere.png">
+                <div class="content">
+                    <div class="title">
+                        Les Clairières
+                    </div>
                 </div>
-            </a>
-            <a href="Le-plateau.html" class="biome-card-link">
-                <div class="biome-card">
-                    <img src="Public/plateau.png" alt="Le Plateau">
-                    <h3>Le Plateau</h3>
-                    <p>Un habitat sec et rocheux où évoluent des espèces adaptées aux conditions extrêmes.</p>
+            </div>
+            <div class="item">
+                <img src="Public/Le-plateau/plateau.jpg">
+                <div class="content">
+                    <div class="title">
+                        Le Plateau
+                    </div>
                 </div>
-            </a>
-            <a href="Le-vallon-des-cascades.html" class="biome-card-link">
-                <div class="biome-card">
-                    <img src="Public/vallon-cascade.png" alt="Le Vallon des Cascades">
-                    <h3>Le Vallon des Cascades</h3>
-                    <p>Explorez un univers aquatique où la faune aquatique et terrestre se rencontre.</p>
+            </div>
+            <div class="item">
+                <img src="Public/vallon-cascade.png">
+                <div class="content">
+                    <div class="title">
+                        La Vallon des Cascades
+                    </div>
                 </div>
-            </a>
-            <a href="Le-bois-des-pins.html" class="biome-card-link">
-                <div class="biome-card">
-                    <img src="Public/bois-des-pins.jpg" alt="Le Bois des Pins">
-                    <h3>Le Bois des Pins</h3>
-                    <p>Promenez-vous dans une forêt dense abritant de nombreuses espèces d’oiseaux et mammifères.</p>
+            </div>
+            <div class="item">
+                <img src="Public/bois-des-pins.jpg">
+                <div class="content">
+                    <div class="title">
+                        Le Bois des Pins
+                    </div>
                 </div>
-            </a>
-            <a href="La-bergerie-des-reptiles.html" class="biome-card-link">
-                <div class="biome-card">
-                    <img src="Public/bergerie-reptile.jpg" alt="La Bergerie des Reptiles">
-                    <h3>La Bergerie des Reptiles</h3>
-                    <p>Un habitat chaud et humide où vous pourrez observer des reptiles fascinants.</p>
+            </div>
+            <div class="item">
+                <img src="Public/bergerie-reptile.jpg">
+                <div class="content">
+                    <div class="title">
+                        La Bergerie des reptiles
+                    </div>
                 </div>
-            </a>
+            </div>
         </div>
-    </main>    
+        <!-- next prev -->
+
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <!-- time running -->
+        <div class="time"></div>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>

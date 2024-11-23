@@ -1,65 +1,39 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="carrousel.css">
-    <link rel="stylesheet" href="accueil.css">
-
+    <title>ISEN'ZOO</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <nav class="header-container">
-            <div class="logo">
-                <a href="Accueil.html">
-                    <img src="Public/logo-site.png" alt="Logo Parc Animalier de l'ISEN">
-                </a>
-            </div>
-    
-            <ul class="nav-links">
-                <li><a href="decouvrir.html">Découvrir le Parc</a></li>
-                <li><a href="gestion-biomes.html">Les biomes</a></li>
-                <li><a href="animaux.html">Animaux</a></li>
-                <li><a href="services.html">Nos Services</a></li>
-                <li><a href="billeterie.html">Billeterie</a></li>
-            </ul>
-    
-            <a href="Connexion.html" class="Inscription">
-                <img src="Public/empreinte-de-patte.png" alt="PatteChat" class="icon"> Inscription
-            </a>
+        <nav>
+            <a href="decouvrir.html">Découvrir le Parc</a>
+            <a href="gestion-biomes.html">Les biomes</a>
+            <a href="animaux.html">Animaux</a>
+            <a href="services.html">Nos Services</a>
+            <a href="billeterie.html">Billeterie</a>
+            <a href="Connexion.html">Inscription</a>
         </nav>
     </header>
 
-    <main>
-        <section id="carousel">
-            <div class="carousel-container">
-                <div class="carousel-slide">
-                    <video src="Public/tigre.mp4" muted autoplay loop></video>
-                    <video src="Public/loup.mp4" muted autoplay loop></video>
-                    <video src="Public/elephant.mp4" muted autoplay loop></video>
-                    <video src="Public/flamant.mp4" muted autoplay loop></video>
-                    <video src="Public/lionne.mp4" muted autoplay loop></video>
+    <!-- carousel -->
+    <div class="carousel">
+        <!-- list item -->
+        <div class="list">
+            <div class="item">
+                <img src="public/tigre.mp4">
+                <div class="content">
+                    <div class="author">ISEN'ZOO</div>
+                    <div class="title">EN IMMERSION AVEC ISEN'ZOO</div>
+                    <div class="topic">VISITEZ DÈS MAINTENANT</div>
+                    <div class="buttons">
+                        <button>VOIR PLUS</button>
+                    </div>
                 </div>
-                <button class="prev-btn">&#8249;</button>
-                <button class="next-btn">&#8250;</button>
             </div>
-        </section>
-        <section id="action-buttons">
-            <div class="button-container">
-                <a href="gestion-biomes.html" class="button">Gestion des biomes</a>
-                <a href="services.html" class="button">Liste des services</a>
-                <a href="billeterie.html" class="button">Billeterie</a>
-            </div>
-        </section>
-    
-        <section id="review-section">
-            <div class="review-container">
-                <h2>Donnez votre avis sur le parc</h2>
-                <textarea placeholder="Écrivez ici votre avis..."></textarea>
-                <button class="submit-review">Soumettre</button>
-            </div>
-        </section>
-    </main>
-    <script src="carrousel.js"></script>
+        </div>
+    </div>
 </body>
 </html>
