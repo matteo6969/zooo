@@ -1,115 +1,30 @@
-/* Style général */
-body {
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
     margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-    margin-top: 70px; /* Compense la hauteur du header fixe */
+    font-family: Poppins;
+    font-size: 15px;
+    font-size: bold;
+    background-color: #000;
 }
-
-/* Header global */
-header {
-    background-color: rgba(47, 82, 51, 0.8); /* Vert avec 80% d'opacité */
-    height: 70px; /* Hauteur du header */
-    display: flex; /* Flexbox pour aligner les éléments */
-    align-items: center;
-    padding: 0 2em; /* Espace horizontal */
-    position: fixed; /* Reste en haut au scroll */
-    top: 0;
-    width: 100%;
-    z-index: 1000; /* Toujours au-dessus */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-/* Conteneur principal du header */
-.header-container {
-    display: flex;
-    align-items: center; /* Centrage vertical */
-    justify-content: flex-start; /* Tout aligne à gauche */
-    width: 100%; /* Prend toute la largeur */
-    gap: 2em; /* Ajoute un espace entre le logo et .nav-links */
-}
-
-/* Logo */
-.logo {
-    display: flex;
-    align-items: center; /* Centre le logo verticalement */
-    margin-right: 1em; /* Optionnel : espace entre le logo et les liens */
-}
-
-.logo img {
-    height: 120px; /* Augmente la hauteur */
-    width: auto; /* Conserve les proportions */
-    cursor: pointer; /* Pointeur au survol */
-}
-
-/* Navigation principale (liens) */
-.nav-links {
-    list-style: none;
-    display: flex; /* Les liens sont alignés horizontalement */
-    gap: 2em; /* Plus d'espace entre les liens */
-    margin: 0;
-    padding: 0;
-
-    /* Déplace les liens vers la gauche */
-    margin-left: 0;
-}
-
-.nav-links li {
-    margin: 0;
-}
-
-.nav-links li a {
-    font-size: 13px; /* Taille fixe en pixels */
-}
-
-.nav-links a {
-    color: #f0ecdc; /* Couleur du texte */
-    text-decoration: none; /* Supprime le soulignement */
-    font-weight: bold;
-    font-size: 2%;
-    transition: color 0.3s ease;
-    
-}
-
-
-.nav-links a:hover {
-    color: #a7a876; /* Couleur au survol */
-}
-
-/* Bouton Billeterie */
-.Inscription {
-    display: flex; /* Aligne l'icône et le texte en ligne */
-    align-items: center; /* Centre verticalement */
-    justify-content: center; /* Centre le contenu horizontalement */
-    background-color: #ffbd59b8; /* Fond bouton */
-    color: #fff; /* Texte bouton */
-    padding: 0.5em 1.5em;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    font-weight: bold;
+a{
     text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    margin-left: 40%;
 }
+header{
+    
+    max-width: 100%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 350px;
+    z-index: 100;
 
-.Inscription:hover {
-    background-color: #8ca24e;
-    color: #fff;
 }
+header a{
+    color: #eee;
+    margin-right: 40px;
 
-.Inscription .icon {
-    width: 16px; /* Ajuste la taille de l'icône */
-    height: auto; /* Conserve les proportions */
-    margin-right: 8px; /* Ajoute un espace entre l'icône et le texte */
-}
-
-.Inscription i {
-    margin-right: 8px; /* Espace entre l'icône et le texte */
-    font-size: 1.2em; /* Taille de l'icône */
 }
 /* Conteneur principal */
 .main-container {
@@ -119,12 +34,12 @@ header {
     flex-wrap: wrap;
     gap: 2em;
     padding: 2em;
-    background-color: #f9f9f9;
+    background-color: #d3cbcb;
 }
 
 /* Carte */
 .card {
-    background-color: #fff;
+    background-color: #eee;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -182,7 +97,7 @@ header {
 
 .button {
     background-color: #b03e0f;
-    color: #fff;
+    color: #000;
     padding: 0.7em 1.5em;
     border: none;
     border-radius: 5px;
@@ -199,12 +114,11 @@ header {
 
 /* Section Image */
 .hero-section {
-    position: relative;
-    width: 100%;
-    height: 400px; /* Ajuste la hauteur de l'image pour bien l'afficher */
-    margin: 0; /* Supprime toute marge potentielle */
-    padding: 0; /* Supprime tout padding potentiel */
     overflow: hidden;
+    width: 100%;
+    height: 400px; 
+    position: relative;
+    margin-top: 0px;
 }
 
 .hero-image {
@@ -228,11 +142,11 @@ header {
 .description-section {
     text-align: center;
     padding: 2em;
-    background-color: #fff;
+    background-color: #d3cbcb;
 }
 
 .description-section h2 {
-    color: #b03e0f;
+    color: #000;
     font-size: 1.8em;
 }
 
