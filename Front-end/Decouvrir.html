@@ -3,27 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ISEN'ZOO - Plan du parc</title>
+    <title>ISEN'ZOO</title>
     <link rel="stylesheet" href="decouvrir.css">
 <body>
     <header>
         <nav>
+            <a href="Accueil.html">Accueil</a>
             <a href="decouvrir.html">Découvrir le Parc</a>
             <a href="gestion-biomes.html">Les biomes</a>
-            <a href="animaux.html">Animaux</a>
             <a href="services.html">Nos Services</a>
             <a href="billeterie.html">Billeterie</a>
-            <a href="Connexion.html">Inscription</a>
+            <a href="Connexion.html">Connexion</a>
         </nav>
     </header>
 
     <script src="Public/imageMapResizer.min.js"></script>
     <script src="decouvrir.js"></script>
+
+    <section class="description-section">
+        <h2>Explorez le parc d'ISEN'ZOO grâce à notre carte interactive !</h2>
+        <p>
+            Chaque zone du parc représente un biome unique rempli d'animaux fascinants. Cliquez sur un biome pour découvrir ses spécificités, ses habitants et plonger dans l'univers naturel qui leur est dédié. Une expérience immersive pour mieux comprendre et apprécier la diversité de notre faune.
+        </p>
+    
+    </section>
+
     <main>       
 
-        <img usemap="#plan_parc" src="Public/parc-plan.jpeg" alt="Carte du Zoo" />
-          
-        <map name="plan_parc">
+        <img usemap="#parc_plan" src="Public/parc-plan.jpeg" alt="Carte du Zoo" />          
+        <map name="parc_plan">
             <area
                 shape="poly"
                 coords="1400,78,1345,15,1307,0,1234,0,1186,35,1140,33,1117,83,1026,119,1006,151,819,162,721,212,647,285,627,323,617,366,650,442,677,453,695,468,741,475,776,516,761,572,945,502,948,447,988,429,1019,431,1039,439,1064,469,1115,485,1130,479,1155,462,1271,437,1342,386,1393,335,1428,284,1451,249,1479,231,1501,216,1408,140"
