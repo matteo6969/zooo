@@ -1,32 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-body{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
     margin: 0;
-    font-family: Poppins;
-    font-size: 15px;
-    font-size: bold;
+    font-family: Poppins, sans-serif;
     background-color: #000;
+    color: #eee;
 }
-a{
+
+a {
     text-decoration: none;
 }
-header{
-    
+
+header {
     max-width: 100%;
-    margin: auto;
-    height: 50px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 70px;
     position: fixed;
-    left: 350px;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
-
+    background-color: #000;
 }
-header a{
+
+header .logo img {
+    height: 60px;
+    display: block;
+}
+
+header .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+header .nav-links a, header .login a {
     color: #eee;
-    margin-right: 40px;
-
-
+    font-weight: 600;
 }
+
 .carousel{
     height: 100vh;
     margin-top: 0px;
@@ -70,22 +84,27 @@ header a{
 .carousel .list .item .topic{
     color: #f1683a;
 }
-.carousel .list .item .buttons{
-    display: grid;
-    grid-template-columns: repeat(2, 130px);
-    grid-template-rows: 40px;
-    gap: 5px;
-    margin-top: 20px;
-}
-.carousel .list .item .buttons button{
-    border: none;
-    background-color: #eee;
-    letter-spacing: 3px;
-    font-family: Poppins;
-    font-weight: 500;
+.carousel .list .item .buttons a, 
+.carousel .list .item .buttons button {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none; 
+    background-color: #eee; 
+    color: #f1683a; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    border: none; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
 }
 
-
+.carousel .list .item .buttons a:hover, 
+.carousel .list .item .buttons button:hover {
+    background-color: #d9534f;
+    color: #eee; 
+}
 /* animation */
 .carousel .list .item:nth-child(1){
     z-index: 1;
@@ -120,4 +139,158 @@ header a{
 
 .carousel .list .item:nth-child(1) .content .buttons{
     animation-delay: 1.8s!important;
+}
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.search-section input, 
+.search-section button, 
+.navigation-section select, 
+.navigation-section button, 
+.review-section textarea, 
+.review-section button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    width: 80%;
+    max-width: 400px;
+}
+
+.search-section button,
+.navigation-section button,
+.review-section button {
+    background-color: #f1683a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-section button:hover,
+.navigation-section button:hover,
+.review-section button:hover {
+    background-color: #d9534f;
+}
+
+.map-buttons .btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 30px;
+    background-color: #f1683a;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.map-buttons .btn:hover {
+    background-color: #d9534f;
+}
+.review-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #000; /* Fond en noir pour correspondre au thème */
+    color: #eee; /* Couleur claire du texte */
+}
+
+.review-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.review-section p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+/* Design spécifique au formulaire d'avis */
+.wrapper {
+    background: #111; /* Fond légèrement plus clair */
+    padding: 2rem;
+    max-width: 576px;
+    margin: 0 auto;
+    border-radius: .75rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem; /* Espacement entre les étoiles */
+    font-size: 2rem; /* Taille des étoiles */
+    color: #ccc; /* Couleur par défaut pour les étoiles */
+}
+
+.rating .star {
+    cursor: pointer; /* Curseur interactif */
+    transition: transform 0.3s ease, color 0.3s ease; /* Transition fluide */
+}
+
+.rating .bxs-star {
+    color: #FFBD13; /* Couleur pour les étoiles remplies */
+}
+
+.rating .active {
+    transform: scale(1.2); /* Agrandissement lors de la sélection */
+}
+
+textarea {
+    width: 100%;
+    background: #222;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    resize: none;
+    margin-bottom: 20px;
+    color: #eee;
+}
+
+textarea::placeholder {
+    color: #aaa;
+}
+
+.btn-group {
+    display: flex;
+    grid-gap: .5rem;
+    align-items: center;
+}
+
+.btn-group .btn {
+    padding: .75rem 1rem;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: .875rem;
+    font-weight: 500;
+}
+
+.btn-group .btn.submit {
+    background: #f1683a;
+    color: #fff;
+}
+
+.btn-group .btn.submit:hover {
+    background: #d9534f;
+}
+
+.btn-group .btn.cancel {
+    background: #444;
+    color: #fff;
+}
+
+.btn-group .btn.cancel:hover {
+    background: #555;
 }

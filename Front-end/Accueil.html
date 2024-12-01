@@ -5,35 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISEN'ZOO</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav>
+        <div class="logo">
+            <a href="Accueil.html"><img src="public/logo.png" alt="Logo ISEN'ZOO"></a>
+        </div>
+        <nav class="nav-links">
             <a href="decouvrir.html">Découvrir le Parc</a>
             <a href="gestion-biomes.html">Les biomes</a>
-            <a href="animaux.html">Animaux</a>
             <a href="services.html">Nos Services</a>
             <a href="billeterie.html">Billeterie</a>
-            <a href="Connexion.html">Connexion</a>
         </nav>
+        <div class="login">
+            <a href="Connexion.html">Connexion</a>
+        </div>
     </header>
 
     <!-- carousel -->
     <div class="carousel">
-        <!-- list item -->
         <div class="list">
             <div class="item">
-                <img src="public/tigre.mp4">
+                <img src="public/tigre.mp4" alt="Tigre en immersion">
                 <div class="content">
                     <div class="author">ISEN'ZOO</div>
                     <div class="title">EN IMMERSION AVEC ISEN'ZOO</div>
                     <div class="topic">VISITEZ DÈS MAINTENANT</div>
                     <div class="buttons">
-                        <button>VOIR PLUS</button>
+                        <a href="billeterie.html" class="btn">BILLETERIE</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Section Recherche -->
+    <section class="search-section">
+        <h2>Recherchez un animal</h2>
+        <p>Trouvez rapidement le biome et l'enclos d'un animal spécifique.</p>
+        <input type="text" placeholder="Nom de l'animal...">
+        <button>Rechercher</button>
+    </section>
+
+    <!-- Section Navigation -->
+    <section class="navigation-section">
+        <h2>Navigation dans le parc</h2>
+        <p>Planifiez votre itinéraire dans le parc. Choisissez un point de départ et une destination.</p>
+        <select>
+            <option value="">Point de départ...</option>
+            <option value="biome">Le Belvedere</option>
+            <option value="biome">Le Plateau</option>
+            <option value="biome">Les Clairières</option>
+            <option value="biome">Le Bois des Pins</option>
+            <option value="biome">La Bergerie des reptiles</option>
+            <option value="biome">La Vallon des Cascades</option>
+            <option value="services">Gare</option>
+            <option value="services">Boutique</option>
+            <option value="services">Aire de Pique-Nique</option>
+            <option value="services">Café Nomad</option>
+            <option value="services">Petit Café</option>
+            <option value="services">Toilettes</option>
+            <option value="services">Point d'eau</option>
+            <option value="services">Lodge</option>
+            <option value="services">Paillote</option>
+            <option value="services">Tente pédagogique</option>
+            <option value="services">Plateau des jeux</option>
+            <option value="services">Point de vue</option>
+        </select>
+        <select>
+            <option value="">Destination...</option>
+            <option value="services">Gare</option>
+            <option value="services">Boutique</option>
+            <option value="services">Aire de Pique-Nique</option>
+            <option value="services">Café Nomad</option>
+            <option value="services">Petit Café</option>
+            <option value="services">Toilettes</option>
+            <option value="services">Point d'eau</option>
+            <option value="services">Lodge</option>
+            <option value="services">Paillote</option>
+            <option value="services">Tente pédagogique</option>
+            <option value="services">Plateau des jeux</option>
+            <option value="services">Point de vue</option>
+        </select>
+        <button>Calculer l'itinéraire</button>
+    </section>
+
+    <!-- Section Carte -->
+    <section class="map-section">
+        <h2>Explorez la carte</h2>
+        <p>Découvrez le parc grâce à notre carte interactive.</p>
+        <div class="map-buttons">
+            <a href="decouvrir.html" class="btn">Voir la Carte</a>
+            <a href="services.html" class="btn">Explorer les Services</a>
+        </div>
+    </section>
+    <!-- Section Avis -->
+    <section class="review-section">
+        <h2>Laissez votre avis</h2>
+        <p>Votre opinion compte pour nous ! Notez votre expérience au parc et laissez un commentaire.</p>
+        <div class="wrapper">
+            <form action="#">
+                <div class="rating">
+                    <input type="number" name="rating" hidden>
+                    <i class="bx bx-star star"></i>
+                    <i class="bx bx-star star"></i>
+                    <i class="bx bx-star star"></i>
+                    <i class="bx bx-star star"></i>
+                    <i class="bx bx-star star"></i>
+                </div>
+                <textarea name="opinion" cols="30" rows="5" placeholder="Votre avis..."></textarea>
+                <div class="btn-group">
+                    <button type="submit" class="btn submit">Envoyer</button>
+                    <button type="button" class="btn cancel">Annuler</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="accueil.js"></script>
 </body>
 </html>
