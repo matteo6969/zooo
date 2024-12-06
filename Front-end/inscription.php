@@ -1,5 +1,4 @@
 <?php
-// Informations de connexion à la base
 $servername = "localhost";
 $username = "root";
 $password = "";
