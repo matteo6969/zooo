@@ -13,10 +13,10 @@ CREATE TABLE `animals` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `animals` (`id`, `image`, `name`, `description`, `enclosure_id`) VALUES
-(68, 'Public/les-clairieres/oryx.jpg', 'Oryx beisa', '', 11),
-(69, 'Public/les-clairieres/gazelle.jpg', 'Gazelle', '', 15),
+(68, 'Public/Le-belvedere/oryx.jpg', 'Oryx beisa', '', 11),
+(69, 'Public/le-belvedere/gazelle.jpg', 'Gazelle', '', 15),
 (70, 'Public/Le-belvedere/autruche.jpg', 'Autruche', '', 15),
-(71, 'Public/les-clairieres/gnou.jpg', 'Gnou', '', 11),
+(71, 'Public/le-belvedere/gnou.jpg', 'Gnou', '', 11),
 (72, 'Public/Le-belvedere/tapir.jpg', 'Tapir', '', 16),
 (73, 'Public/Le-belvedere/coati.jpg', 'Coati', '', 14),
 (74, 'Public/Le-belvedere/fennec.jpg', 'Fennec', '', 13),
@@ -54,7 +54,7 @@ INSERT INTO `animals` (`id`, `image`, `name`, `description`, `enclosure_id`) VAL
 (106, 'Public/les-clairieres/ibis.jpg', 'Ibis', '', 34),
 (107, 'Public/les-clairieres/tortue.jpg', 'Tortue', 'La tortue d’Hermann (Testudo hermanni), un reptile de l’ordre des testudinates et de la famille des testudinidés, est une espèce terrestre originaire des régions méditerranéennes, du sud-est de l’Europe et d’Afrique du Nord. Avec une taille de 20 à 30 cm et un poids de 1 à 3 kg, cette tortue herbivore se nourrit principalement de plantes, feuilles et fleurs. Elle vit généralement entre 50 et 100 ans, pond 3 à 6 œufs par portée après une gestation de 60 à 90 jours, et habite les prairies, forêts ouvertes et zones arides. Son statut UICN est quasi menacé (NT).', 34),
 (108, 'Public/les-clairieres/pecari.jpg', 'Pécari', '', 37),
-(109, 'Public/les-clairieres/tortue.jpg', 'Tortue', 'Tamanoir', 'La tortue d’Hermann (Testudo hermanni), un reptile de l’ordre des testudinates et de la famille des testudinidés, est une espèce terrestre originaire des régions méditerranéennes, du sud-est de l’Europe et d’Afrique du Nord. Avec une taille de 20 à 30 cm et un poids de 1 à 3 kg, cette tortue herbivore se nourrit principalement de plantes, feuilles et fleurs. Elle vit généralement entre 50 et 100 ans, pond 3 à 6 œufs par portée après une gestation de 60 à 90 jours, et habite les prairies, forêts ouvertes et zones arides. Son statut UICN est quasi menacé (NT).', 39),
+(109, 'Public/les-clairieres/tamanoir.jpg', 'Tamanoir', '', 39),
 (110, 'Public/les-clairieres/nandou.jpg', 'Nandou', '', 39),
 (111, 'Public/les-clairieres/wallaby.jpg', 'Wallaby', '', 42),
 (112, 'Public/les-clairieres/porcepic.jpg', 'Porc-épic', '', 44),
