@@ -38,7 +38,7 @@ INSERT INTO `animals` (`id`, `image`, `name`, `description`, `enclosure_id`) VAL
 (90, 'Public/Le-plateau/loupcriniere.png', 'Loup à crinière', '', 28),
 (91, 'Public/Le-plateau/tamarin.jpg', 'Tamarin', '', 20),
 (92, 'Public/Le-plateau/', 'Capucin', '', 21),
-(93, 'Public/Le-plateau/', 'Gibbon', '', 22),
+(93, 'Public/Le-plateau/gibbon.jpg', 'Gibbon', '', 22),
 (94, 'Public/Le-plateau/ouistiti.jpg', 'Ouistiti', 'Louistiti commun ( Callithrix jacchus), un primate de la famille des callitrichidés, vit principalement dans les forêts tropicales et sèches du Brésil. Il mesure entre 18 et 25 cm sans la queue et pèse de 300 à 500 g. Sa durée de vie varie de 10 à 12 ans en milieu sauvage, mais peut atteindre jusqu à 18 ans en captivité. La gestation dure environ 5 mois, donnant naissance à 2 petits par portée. Omnivore, il se nourrit de fruits, d insectes et de petits vertébrés. Classé *préoccupation mineure* (LC) par l UICN, il n est pas actuellement en danger.', 22),
 (95, 'Public/les-clairieres/', 'Marabout', '', 32),
 (96, 'Public/les-clairieres/watusi.jpg', 'Watusi', '', 33),
