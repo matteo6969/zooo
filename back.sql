@@ -4,7 +4,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `animals` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `image` longblob NOT NULL,
+  `image` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
   `description` text NOT NULL,
   `enclosure_id` int(11) DEFAULT NULL,
