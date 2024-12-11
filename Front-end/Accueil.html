@@ -18,10 +18,11 @@
             <a href="services.html">Nos Services</a>
             <a href="billeterie.html">Billeterie</a>
         </nav>
-        <div class="login">
+        <div id="header-login" class="login">
             <a href="Connexion.html">Connexion</a>
         </div>
     </header>
+    <script src="checkLoginStatus.js"></script>
 
     <!-- carousel -->
     <div class="carousel">
@@ -42,23 +43,23 @@
 
     <!-- Section Recherche -->
     <section class="search-section">
-        <h2>Recherchez un animal</h2>
-        <p>Trouvez rapidement le biome et l'enclos d'un animal spécifique.</p>
-        <!-- Formulaire de recherche -->
-        <form action="search.php" method="GET">
-            <input 
-                type="text" 
-                name="animal_name" 
-                placeholder="Nom de l'animal..." 
-                required
-                style="width: 100%; padding: 0.8em; margin-bottom: 1em; border: 1px solid #ccc; border-radius: 5px; font-size: 1em;">
-            <button 
-                type="submit" 
-                style="background-color: #f1683a; color: #fff; padding: 0.8em 1.5em; border: none; border-radius: 5px; font-size: 1em; cursor: pointer; transition: background-color 0.3s ease;">
-                Rechercher
-            </button>
-        </form>
-    </section>
+    <h2>Recherchez un animal</h2>
+    <p>Trouvez rapidement le biome et l'enclos d'un animal spécifique.</p>
+    <!-- Formulaire de recherche -->
+    <form action="search.php" method="GET" class="search-form">
+        <input 
+            type="text" 
+            name="animal_name" 
+            class="search-input"
+            placeholder="Nom de l'animal..." 
+            required>
+        <button 
+            type="submit" 
+            class="search-button">
+            Rechercher
+        </button>
+    </form>
+</section>
 
     <!-- Section Carte -->
     <section class="map-section">
@@ -69,7 +70,7 @@
             <a href="services.html" class="btn">Explorer les Services</a>
         </div>
     </section>
-    
+
     <!-- Section Navigation -->
     <section class="navigation-section">
         <h2>Navigation dans le parc</h2>

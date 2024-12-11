@@ -25,10 +25,6 @@ $email = $_SESSION['email'];
             color: #eee;
         }
 
-        a {
-            text-decoration: none;
-        }
-
         header {
             max-width: 100%;
             display: flex;
@@ -42,7 +38,6 @@ $email = $_SESSION['email'];
             right: 0;
             z-index: 100;
             background-color: #000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
 
         header .logo img {
@@ -55,9 +50,16 @@ $email = $_SESSION['email'];
             gap: 20px;
         }
 
-        header .nav-links a, header .login a {
+        header .nav-links a {
             color: #eee;
             font-weight: 600;
+            text-decoration: none;
+        }
+
+
+        header .profile-icon img {
+            height: 60px;
+            object-fit: cover;
         }
 
         main {
@@ -68,7 +70,6 @@ $email = $_SESSION['email'];
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
-            margin-top: 12%;
         }
 
         main h1 {
@@ -100,15 +101,15 @@ $email = $_SESSION['email'];
             background-color: #a7a876;
         }
 
-        .background-image {
+        body::before {
+            content: '';
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            background: url('Public/image1.jpg') no-repeat center center/cover;
             z-index: -1;
-            background-size: cover;
-            background-position: center;
         }
     </style>
 </head>
@@ -119,18 +120,16 @@ $email = $_SESSION['email'];
         </div>
         <nav class="nav-links">
             <a href="decouvrir.html">Découvrir le Parc</a>
-            <a href="gestion-biomes.html">Les biomes</a>
+            <a href="gestion-biomes.html">Les Biomes</a>
             <a href="services.html">Nos Services</a>
             <a href="billeterie.html">Billeterie</a>
         </nav>
         <div class="login">
-            <a href="Connexion.html">Connexion</a>
+            <a href="profil.php" class="profile-icon">
+                <img src="public/profil.png" alt="Profil">
+            </a>
         </div>
     </header>
-
-    <div class="background-image">
-        <img src="Public/image1.jpg" alt="Image de fond">
-    </div>
 
     <main>
         <h1>Bienvenue, <?php echo htmlspecialchars($nom); ?>!</h1>

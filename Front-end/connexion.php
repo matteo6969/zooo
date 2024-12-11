@@ -38,15 +38,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header("Location: profil.php");
             exit();
         } else {
-            echo "Mot de passe incorrect. <a href='connexion.html'>Réessayer</a>";
+            // Rediriger avec un message d'erreur
+            header("Location: connexion.php?error=mot_de_passe");
+            exit();
         }
     } else {
-        echo "Aucun utilisateur trouvé avec cet email. <a href='inscription.html'>Créer un compte</a>";
+        // Rediriger avec un message d'erreur
+        header("Location: connexion.php?error=email_incorrect");
+        exit();
     }
 
     $stmt->close();
 } else {
-    echo "Aucune donnée reçue.";
+    // Rediriger si le formulaire n'est pas soumis
+    header("Location: connexion.php");
+    exit();
 }
 
 $conn->close();
