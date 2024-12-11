@@ -5,6 +5,7 @@ body {
     font-family: Poppins, sans-serif;
     background-color: #000;
     color: #eee;
+    overflow-x: hidden;
 }
 
 a {
@@ -146,54 +147,113 @@ section {
     text-align: center;
 }
 
-.search-section input, 
-.search-section button, 
-.navigation-section select, 
-.navigation-section button, 
-.review-section textarea, 
-.review-section button {
-    margin-top: 10px;
-    padding: 10px;
-    font-size: 16px;
-    width: 80%;
-    max-width: 400px;
+.navigation-section {
+    max-width: 600px;
+    margin: 4em auto;
+    padding: 2em;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.search-section button,
-.navigation-section button,
-.review-section button {
-    background-color: #f1683a;
+.navigation-section h2 {
+    color: #475429;
+    margin-bottom: 1em;
+}
+
+.navigation-section p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 2em;
+}
+
+.navigation-section select,
+.navigation-section button {
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.navigation-section button {
+    background-color: #475429;
     color: #fff;
-    border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
-.search-section button:hover,
-.navigation-section button:hover,
-.review-section button:hover {
-    background-color: #d9534f;
+.navigation-section button:hover {
+    background-color: #a7a876;
+}
+
+.result {
+    margin-top: 2em;
+    font-size: 1.2em;
+    color: #555;
+    text-align: center;
+}
+/* PLAN */
+.map-section {
+    position: relative;
+    text-align: center;
+    height: 500px; /* Ajustez la hauteur si nécessaire */
+    background-image: url('public/parc-plan.jpeg');
+    background-size: cover; /* Couvre toute la section */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Évite la répétition de l'image */
+    color: #fff; /* Couleur blanche pour le texte */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre verticalement */
+    align-items: center; /* Centre horizontalement */
+    padding: 20px; /* Espacement interne */
+}
+
+.map-section h2, 
+.map-section p {
+    margin: 0;
+    z-index: 1; /* Assure que le texte est au-dessus de l'image */
+    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour améliorer la lisibilité */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Ajoute une ombre pour rendre le texte plus lisible */
+}
+
+.map-buttons {
+    margin-top: auto; /* Place les boutons en bas de la section */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    border-radius: 10px;
 }
 
 .map-buttons .btn {
-    display: inline-block;
-    margin: 10px;
-    padding: 15px 30px;
-    background-color: #f1683a;
-    color: #fff;
-    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #333;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    display: inline-block;
+    transition: background-color 0.3s ease;
 }
 
 .map-buttons .btn:hover {
-    background-color: #d9534f;
+    background-color: #555;
 }
+
+/* AVIS */
 .review-section {
     padding: 60px 20px;
     text-align: center;
-    background-color: #000; /* Fond en noir pour correspondre au thème */
-    color: #eee; /* Couleur claire du texte */
+    background-image: url('public/enclos-belvedere.jpg');
+    background-size: cover; /* Fait en sorte que l'image couvre toute la section */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Évite la répétition de l'image */
+    color: #000;
+    height: 500px; /* Définissez une hauteur explicite pour agrandir la section */
 }
 
 .review-section h2 {
@@ -207,20 +267,15 @@ section {
     margin-bottom: 30px;
 }
 
-/* Design spécifique au formulaire d'avis */
+/* Formulaire d'avis */
 .wrapper {
-    background: #111; /* Fond légèrement plus clair */
+    background: #111; 
     padding: 2rem;
     max-width: 576px;
     margin: 0 auto;
     border-radius: .75rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.wrapper h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+    background-color: rgba(0, 0, 0, 0.5); /* Ton transparent : noir à 50% */
 }
 
 .rating {
@@ -246,15 +301,16 @@ section {
 }
 
 textarea {
-    width: 100%;
+    width: calc(100% - 2rem); /* Réduit la largeur en fonction du padding global */
     background: #222;
-    padding: 1rem;
+    padding: 1rem; /* Ajoute un espacement interne */
     border-radius: .5rem;
     border: none;
     outline: none;
     resize: none;
     margin-bottom: 20px;
     color: #eee;
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
 }
 
 textarea::placeholder {

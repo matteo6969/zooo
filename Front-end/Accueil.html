@@ -54,53 +54,10 @@
                 style="width: 100%; padding: 0.8em; margin-bottom: 1em; border: 1px solid #ccc; border-radius: 5px; font-size: 1em;">
             <button 
                 type="submit" 
-                style="background-color: #475429; color: #fff; padding: 0.8em 1.5em; border: none; border-radius: 5px; font-size: 1em; cursor: pointer; transition: background-color 0.3s ease;">
+                style="background-color: #f1683a; color: #fff; padding: 0.8em 1.5em; border: none; border-radius: 5px; font-size: 1em; cursor: pointer; transition: background-color 0.3s ease;">
                 Rechercher
             </button>
         </form>
-    </section>
-
-    <!-- Section Navigation -->
-    <section class="navigation-section">
-        <h2>Navigation dans le parc</h2>
-        <p>Planifiez votre itinéraire dans le parc. Choisissez un point de départ et une destination.</p>
-        <select>
-            <option value="">Point de départ...</option>
-            <option value="biome">Le Belvedere</option>
-            <option value="biome">Le Plateau</option>
-            <option value="biome">Les Clairières</option>
-            <option value="biome">Le Bois des Pins</option>
-            <option value="biome">La Bergerie des reptiles</option>
-            <option value="biome">La Vallon des Cascades</option>
-            <option value="services">Gare</option>
-            <option value="services">Boutique</option>
-            <option value="services">Aire de Pique-Nique</option>
-            <option value="services">Café Nomad</option>
-            <option value="services">Petit Café</option>
-            <option value="services">Toilettes</option>
-            <option value="services">Point d'eau</option>
-            <option value="services">Lodge</option>
-            <option value="services">Paillote</option>
-            <option value="services">Tente pédagogique</option>
-            <option value="services">Plateau des jeux</option>
-            <option value="services">Point de vue</option>
-        </select>
-        <select>
-            <option value="">Destination...</option>
-            <option value="services">Gare</option>d
-            <option value="services">Boutique</option>
-            <option value="services">Aire de Pique-Nique</option>
-            <option value="services">Café Nomad</option>
-            <option value="services">Petit Café</option>
-            <option value="services">Toilettes</option>
-            <option value="services">Point d'eau</option>
-            <option value="services">Lodge</option>
-            <option value="services">Paillote</option>
-            <option value="services">Tente pédagogique</option>
-            <option value="services">Plateau des jeux</option>
-            <option value="services">Point de vue</option>
-        </select>
-        <button>Calculer l'itinéraire</button>
     </section>
 
     <!-- Section Carte -->
@@ -112,6 +69,85 @@
             <a href="services.html" class="btn">Explorer les Services</a>
         </div>
     </section>
+    
+    <!-- Section Navigation -->
+    <section class="navigation-section">
+        <h2>Navigation dans le parc</h2>
+        <p>Planifiez votre itinéraire dans le parc. Choisissez un point de départ et une destination.</p>
+        <form id="route-form">
+            <select id="start-point" name="start_point">
+                <option value="">Point de départ...</option>
+                <option value="Le Belvedere">Le Belvedere</option>
+                <option value="Le Plateau">Le Plateau</option>
+                <option value="Les Clairières">Les Clairières</option>
+                <option value="Le Bois des Pins">Le Bois des Pins</option>
+                <option value="La Bergerie des reptiles">La Bergerie des reptiles</option>
+                <option value="La Vallon des Cascades">La Vallon des Cascades</option>
+                <option value="Gare">Gare</option>
+                <option value="Boutique">Boutique</option>
+                <option value="Aire de Pique-Nique">Aire de Pique-Nique</option>
+                <option value="Café Nomad">Café Nomad</option>
+                <option value="Petit Café">Petit Café</option>
+                <option value="Toilettes">Toilettes</option>
+                <option value="Point d'eau">Point d'eau</option>
+                <option value="Lodge">Lodge</option>
+                <option value="Paillote">Paillote</option>
+                <option value="Tente pédagogique">Tente pédagogique</option>
+                <option value="Plateau des jeux">Plateau des jeux</option>
+                <option value="Point de vue">Point de vue</option>
+            </select>
+            <select id="end-point" name="end_point">
+                <option value="">Point d'arrivé...</option>
+                <option value="Le Belvedere">Le Belvedere</option>
+                <option value="Le Plateau">Le Plateau</option>
+                <option value="Les Clairières">Les Clairières</option>
+                <option value="Le Bois des Pins">Le Bois des Pins</option>
+                <option value="La Bergerie des reptiles">La Bergerie des reptiles</option>
+                <option value="La Vallon des Cascades">La Vallon des Cascades</option>
+                <option value="Gare">Gare</option>
+                <option value="Boutique">Boutique</option>
+                <option value="Aire de Pique-Nique">Aire de Pique-Nique</option>
+                <option value="Café Nomad">Café Nomad</option>
+                <option value="Petit Café">Petit Café</option>
+                <option value="Toilettes">Toilettes</option>
+                <option value="Point d'eau">Point d'eau</option>
+                <option value="Lodge">Lodge</option>
+                <option value="Paillote">Paillote</option>
+                <option value="Tente pédagogique">Tente pédagogique</option>
+                <option value="Plateau des jeux">Plateau des jeux</option>
+                <option value="Point de vue">Point de vue</option>
+            </select>
+            <button type="button" onclick="calculateRoute()">Calculer l'itinéraire</button>
+        </form>
+        <div id="result" class="result"></div>
+    </section>
+
+    <script>
+        function calculateRoute() {
+            const form = document.getElementById('route-form');
+            const formData = new FormData(form);
+            const resultDiv = document.getElementById('result');
+
+            fetch('calculate_route.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    resultDiv.innerHTML = data.error;
+                } else if (data.route) {
+                    resultDiv.innerHTML = data.route;
+                }
+            })
+            .catch(error => {
+                resultDiv.innerHTML = "Une erreur est survenue lors du calcul de l'itinéraire.";
+            });
+        }
+    </script>
+
+    
+
     <!-- Section Avis -->
     <section class="review-section">
         <h2>Laissez votre avis</h2>
