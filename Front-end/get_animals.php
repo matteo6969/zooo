@@ -1,22 +1,26 @@
 <?php
-// Connexion à la base de données
-$conn = new mysqli('localhost', 'root', '', 'test');
+header('Content-Type: application/json');
 
-if ($conn->connect_error) {
-    die(json_encode(['error' => 'Erreur de connexion à la base de données.']));
+$host = 'localhost'; // Remplacez par vos paramètres
+$dbname = 'test'; // Remplacez par votre base de données
+$username = 'root'; // Remplacez par votre utilisateur
+$password = ''; // Remplacez par votre mot de passe
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    if (isset($_GET['enclosure_id'])) {
+        $enclosureId = intval($_GET['enclosure_id']);
+        $stmt = $pdo->prepare("SELECT id, image, name, description FROM animals WHERE enclosure_id = ?");
+        $stmt->execute([$enclosureId]);
+        $animals = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        echo json_encode(['animals' => $animals]);
+    } else {
+        echo json_encode(['error' => 'Enclosure ID non fourni.']);
+    }
+} catch (PDOException $e) {
+    echo json_encode(['error' => 'Erreur de connexion : ' . $e->getMessage()]);
 }
-
-// Récupérer l'identifiant de l'enclos depuis l'URL
-$enclosureId = intval($_GET['enclosure_id']);
-
-// Requête pour récupérer les animaux liés à l'enclos
-$result = $conn->query("SELECT id, name, image, description FROM animals WHERE enclosure_id = $enclosureId");
-
-$animals = [];
-while ($row = $result->fetch_assoc()) {
-    $animals[] = $row;
-}
-
-// Retourner les données en JSON
-echo json_encode($animals);
 ?>

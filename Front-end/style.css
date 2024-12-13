@@ -41,7 +41,7 @@ header .nav-links a, header .login a {
     color: #eee;
     font-weight: 600;
 }
-
+/*Carousel*/
 .carousel{
     height: 100vh;
     margin-top: 0px;
@@ -141,6 +141,47 @@ header .nav-links a, header .login a {
 .carousel .list .item:nth-child(1) .content .buttons{
     animation-delay: 1.8s!important;
 }
+/*Recherche Animal*/
+.search-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #000; /* Fond clair pour la section */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 600px; /* Largeur maximale de la section */
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacement entre les éléments */
+}
+
+.search-input {
+    width: 60%; /* Réduit la largeur à 60% de la section */
+    padding: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Inclut le padding dans la largeur */
+}
+
+.search-button {
+    background-color: #f1683a;
+    color: #fff;
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #d9534f;
+}
+
 /* Sections */
 section {
     padding: 60px 20px;
@@ -151,19 +192,19 @@ section {
     max-width: 600px;
     margin: 4em auto;
     padding: 2em;
-    background: #fff;
+    background: #000;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navigation-section h2 {
-    color: #475429;
+    color: #f1683a;
     margin-bottom: 1em;
 }
 
 .navigation-section p {
     font-size: 1em;
-    color: #555;
+    color: #eee;
     margin-bottom: 2em;
 }
 
@@ -179,20 +220,20 @@ section {
 }
 
 .navigation-section button {
-    background-color: #475429;
+    background-color: #f1683a;
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .navigation-section button:hover {
-    background-color: #a7a876;
+    background-color: #d9534f;
 }
 
 .result {
     margin-top: 2em;
     font-size: 1.2em;
-    color: #555;
+    color: #eee;
     text-align: center;
 }
 /* PLAN */
@@ -350,3 +391,5 @@ textarea::placeholder {
 .btn-group .btn.cancel:hover {
     background: #555;
 }
+
+

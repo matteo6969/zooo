@@ -10,7 +10,6 @@ body {
 a {
     text-decoration: none;
 }
-
 header {
     max-width: 100%;
     display: flex;
@@ -40,6 +39,8 @@ header .nav-links a, header .login a {
     color: #eee;
     font-weight: 600;
 }
+
+/*Login*/
 
 .login-section {
     max-width: 400px;

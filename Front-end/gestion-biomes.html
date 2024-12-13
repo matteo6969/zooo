@@ -40,22 +40,22 @@
             </div>
         </div>
 
-            <!-- Section des biomes -->
             <section id="biomes-container" class="thumbnail">
-                <!-- Les biomes seront chargés dynamiquement ici -->
-            </section>
-            
-            <section id="enclosures-container" class="thumbnail" style="display: none;">
-                <button onclick="showBiomes()">Retour aux biomes</button>
-                <div id="enclosures-content">
-                    <!-- Les enclos seront chargés dynamiquement ici -->
+                <div class="biome-item" onclick="loadEnclosures('Nom du biome')">
+                    <h3>Nom du biome</h3>
                 </div>
             </section>
             
+            <section id="enclosures-container" class="thumbnail" style="display: none;">
+                <div class="enclosure-header">
+                    <h2>Biome : Nom du Biome</h2>
+                    <button id="back-to-biomes" class="return-button">Retour</button>
+                </div>
+            </section>
+
             <section id="animals-container" class="thumbnail" style="display: none;">
                 <button onclick="showEnclosures()">Retour aux enclos</button>
                 <div id="animals-content">
-                    <!-- Les animaux seront chargés dynamiquement ici -->
                 </div>
             </section>
     </main>
