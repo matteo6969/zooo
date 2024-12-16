@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    color: #eee;
+}
+
+header {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #000;
+}
+
+header .logo img {
+    height: 60px;
+    display: block;
+}
+
+header .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+header .nav-links a {
+    color: #eee;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+header .profile-icon img {
+    height: 60px;
+    object-fit: cover;
+}
+
+main {
+    max-width: 800px;
+    margin: 5em auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+main h1 {
+    color: #475429;
+    margin-bottom: 1em;
+}
+
+main p {
+    font-size: 1.2em;
+    color: #475429;
+    margin: 0.5em 0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #475429;
+    color: #fff;
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1em;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #a7a876;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Public/image1.jpg') no-repeat center center/cover;
+    z-index: -1;
+}
+
+/* Section admin */
+.admin-section {
+    margin-top: 2em;
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.admin-section h2 {
+    color: #f1683a;
+    margin-bottom: 1em;
+}
+
+.admin-section .enclosure-management {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.admin-section .enclosure-item {
+    background: #222;
+    padding: 1em;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.admin-section .enclosure-item button {
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    background: #f1683a;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.admin-section .enclosure-item button:hover {
+    background: #d9534f;
+}
+
+.admin-section form input,
+.admin-section form button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+}

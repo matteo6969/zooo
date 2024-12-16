@@ -2,18 +2,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const biomesContainer = document.getElementById('biomes-container');
     const enclosuresContainer = document.getElementById('enclosures-container');
     const animalsContainer = document.getElementById('animals-container');
-    const enclosuresContent = document.getElementById('enclosures-content');
-    const animalsContent = document.getElementById('animals-content');
 
     // Charger les biomes au démarrage
     function loadBiomes() {
         fetch('get_biomes.php')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Erreur lors de la récupération des biomes.');
-                }
-                return response.json();
-            })
+            .then(response => response.json())
             .then(data => {
                 if (data.biomes && Array.isArray(data.biomes)) {
                     biomesContainer.innerHTML = data.biomes.map(biome => `
@@ -26,21 +19,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     biomesContainer.innerHTML = '<p>Aucun biome disponible.</p>';
                 }
             })
-            .catch(error => {
-                console.error('Erreur lors du chargement des biomes :', error);
-                biomesContainer.innerHTML = '<p>Erreur lors du chargement des biomes.</p>';
-            });
+            .catch(error => console.error('Erreur lors du chargement des biomes :', error));
     }
-    
-    
 
     window.loadEnclosures = function (biome) {
-        console.log(`Chargement des enclos pour le biome : ${biome}`); // Débogage
         fetch(`get_enclosures.php?biome=${encodeURIComponent(biome)}`)
             .then(response => response.json())
             .then(data => {
-                console.log("Enclos reçus :", data); // Débogage des données
-    
                 if (data.enclosures && Array.isArray(data.enclosures)) {
                     const enclosuresContent = document.getElementById('enclosures-container');
                     enclosuresContent.innerHTML = `
@@ -58,80 +43,169 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
                     `;
                     showEnclosures();
-    
-                    // Ajout d'un événement au bouton retour
                     document.getElementById('back-to-biomes').addEventListener('click', showBiomes);
                 } else {
-                    enclosuresContent.innerHTML = '<p>Aucun enclos disponible pour ce biome.</p>';
+                    console.error('Erreur : Aucun enclos disponible.');
                 }
             })
-            .catch(error => {
-                console.error('Erreur lors du chargement des enclos :', error);
-                const enclosuresContent = document.getElementById('enclosures-container');
-                enclosuresContent.innerHTML = '<p>Erreur lors du chargement des enclos.</p>';
-            });
+            .catch(error => console.error('Erreur lors du chargement des enclos :', error));
     };
     
     
-    // Charger les animaux pour un enclos spécifique
+
     window.loadAnimals = function (enclosureId) {
         fetch(`get_animals.php?enclosure_id=${enclosureId}`)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Erreur lors de la récupération des animaux.');
-                }
-                return response.json();
-            })
+            .then(response => response.json())
             .then(data => {
                 if (data.animals && Array.isArray(data.animals)) {
                     animalsContainer.innerHTML = `
                         <button id="back-to-enclosures" class="return-button">Retour</button>
-                        <div class="carousel">
-                            ${data.animals.map(animal => `
-                                <div class="carousel-item">
-                                    <img src="${animal.image}" alt="${animal.name}">
-                                    <div class="carousel-description">
-                                        <h3>${animal.name}</h3>
-                                        <p>${animal.description}</p>
+                        <div class="carousel-container">
+                            <button class="carousel-button prev">❮</button>
+                            <div class="carousel">
+                                ${data.animals.map(animal => `
+                                    <div class="carousel-item">
+                                        <img src="${animal.image}" alt="${animal.name}">
+                                        <div class="carousel-description">
+                                            <h3>${animal.name || 'Nom non disponible'}</h3>
+                                            <p>${animal.description || 'Aucune description disponible.'}</p>
+                                        </div>
                                     </div>
-                                </div>
-                            `).join('')}
+                                `).join('')}
+                            </div>
+                            <button class="carousel-button next">❯</button>
                         </div>
+                        <section id="review-section" class="review-section">
+                            <h2>Laissez votre avis</h2>
+                            <p>Votre opinion compte pour nous ! Notez votre expérience dans cet enclos et laissez un commentaire.</p>
+                            <div class="wrapper">
+                                <form id="review-form" action="#" method="POST">
+                                    <div class="rating">
+                                        <input type="number" name="rating" hidden>
+                                        <i class="bx bx-star star"></i>
+                                        <i class="bx bx-star star"></i>
+                                        <i class="bx bx-star star"></i>
+                                        <i class="bx bx-star star"></i>
+                                        <i class="bx bx-star star"></i>
+                                    </div>
+                                    <textarea name="opinion" cols="30" rows="5" placeholder="Votre avis..."></textarea>
+                                    <input type="hidden" id="enclosure-id" name="enclosure_id" value="${enclosureId}">
+                                    <div class="btn-group">
+                                        <button type="submit" class="btn submit">Envoyer</button>
+                                        <button type="button" class="btn cancel">Annuler</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
                     `;
-                    initializeCarousel(); // Initialiser le carrousel si nécessaire
-                    showAnimals(); // Afficher la section des animaux
+                    initializeCarousel();
+                    initializeReviewForm(enclosureId); // Gérer les avis
+                    showAnimals();
                     document.getElementById('back-to-enclosures').addEventListener('click', showEnclosures);
                 } else {
                     animalsContainer.innerHTML = '<p>Aucun animal disponible dans cet enclos.</p>';
                 }
             })
-            .catch(error => {
-                console.error('Erreur lors du chargement des animaux :', error);
-                animalsContainer.innerHTML = '<p>Erreur lors du chargement des animaux.</p>';
-            });
+            .catch(error => console.error('Erreur lors du chargement des animaux :', error));
     };
     
+
+    function initializeCarousel() {
+        const carousel = document.querySelector('.carousel');
+        const items = carousel.querySelectorAll('.carousel-item');
+        const prevButton = document.querySelector('.carousel-button.prev');
+        const nextButton = document.querySelector('.carousel-button.next');
+        let currentIndex = 0;
+
+        function showItem(index) {
+            items.forEach((item, i) => {
+                item.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        showItem(currentIndex);
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            showItem(currentIndex);
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % items.length;
+            showItem(currentIndex);
+        });
+
+        console.log(`Carrousel initialisé avec ${items.length} éléments.`);
+    }
+
+    function initializeReviewForm(enclosureId) {
+        const reviewForm = document.getElementById('review-form');
+        const ratingStars = document.querySelectorAll('.rating .star');
+        const ratingInput = document.querySelector('.rating input');
+    
+        // Réinitialiser les étoiles et le formulaire
+        ratingStars.forEach(star => {
+            star.classList.remove('bxs-star', 'active');
+            star.classList.add('bx-star');
+        });
+        ratingInput.value = '';
+        reviewForm.reset();
+    
+        // Gestion des clics sur les étoiles
+        ratingStars.forEach((star, index) => {
+            star.addEventListener('click', () => {
+                ratingStars.forEach(s => {
+                    s.classList.remove('bxs-star', 'active');
+                    s.classList.add('bx-star');
+                });
+                for (let i = 0; i <= index; i++) {
+                    ratingStars[i].classList.remove('bx-star');
+                    ratingStars[i].classList.add('bxs-star', 'active');
+                }
+                ratingInput.value = index + 1;
+            });
+        });
+    
+        // Gestion du formulaire
+        reviewForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const rating = ratingInput.value;
+            const opinion = reviewForm.opinion.value;
+    
+            if (!rating || !opinion) {
+                alert('Veuillez remplir tous les champs.');
+                return;
+            }
+    
+            fetch('submit_review.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ enclosure_id: enclosureId, rating, opinion })
+            })
+                .then(response => response.json())
+                .then(() => alert('Merci pour votre avis !'))
+                .catch(error => console.error('Erreur lors de l\'envoi de l\'avis :', error));
+        });
+    }
     
 
     function showBiomes() {
-        document.getElementById('biomes-container').style.display = 'flex';
-        document.getElementById('enclosures-container').style.display = 'none';
-        document.getElementById('animals-container').style.display = 'none';
+        biomesContainer.style.display = 'flex';
+        enclosuresContainer.style.display = 'none';
+        animalsContainer.style.display = 'none';
     }
-    
-    function showEnclosures() {
-        document.getElementById('biomes-container').style.display = 'none';
-        document.getElementById('enclosures-container').style.display = 'block';
-        document.getElementById('animals-container').style.display = 'none';
-    }
-    
-    function showAnimals() {
-        document.getElementById('biomes-container').style.display = 'none';
-        document.getElementById('enclosures-container').style.display = 'none';
-        document.getElementById('animals-container').style.display = 'block';
-    }
-    
 
-    // Charger les biomes au démarrage
+    function showEnclosures() {
+        biomesContainer.style.display = 'none';
+        enclosuresContainer.style.display = 'block';
+        animalsContainer.style.display = 'none';
+    }
+
+    function showAnimals() {
+        biomesContainer.style.display = 'none';
+        enclosuresContainer.style.display = 'none';
+        animalsContainer.style.display = 'block';
+    }
+
     loadBiomes();
 });

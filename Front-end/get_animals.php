@@ -16,7 +16,11 @@ try {
         $stmt->execute([$enclosureId]);
         $animals = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        echo json_encode(['animals' => $animals]);
+        if (!empty($animals)) {
+            echo json_encode(['animals' => $animals]);
+        } else {
+            echo json_encode(['animals' => []]);
+        }
     } else {
         echo json_encode(['error' => 'Enclosure ID non fourni.']);
     }
