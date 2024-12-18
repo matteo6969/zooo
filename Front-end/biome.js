@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Charger les biomes au démarrage
     function loadBiomes() {
-        fetch('get_biomes.php')
+        fetch('biome.php?action=get_biomes')
             .then(response => response.json())
             .then(data => {
                 if (data.biomes && Array.isArray(data.biomes)) {
@@ -23,38 +23,38 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     window.loadEnclosures = function (biome) {
-        fetch(`get_enclosures.php?biome=${encodeURIComponent(biome)}`)
-            .then(response => response.json())
-            .then(data => {
-                if (data.enclosures && Array.isArray(data.enclosures)) {
-                    const enclosuresContent = document.getElementById('enclosures-container');
-                    enclosuresContent.innerHTML = `
-                        <div class="enclosure-header">
-                            <h2>Biome : ${biome}</h2>
-                            <button id="back-to-biomes" class="return-button">Retour</button>
-                        </div>
-                        <div class="enclosure-grid">
-                            ${data.enclosures.map(enclosure => `
-                                <div class="enclosure-item" onclick="loadAnimals(${enclosure.id})">
-                                    <h3>${enclosure.name}</h3>
-                                    <p>${enclosure.description}</p>
-                                </div>
-                            `).join('')}
-                        </div>
-                    `;
-                    showEnclosures();
-                    document.getElementById('back-to-biomes').addEventListener('click', showBiomes);
-                } else {
-                    console.error('Erreur : Aucun enclos disponible.');
-                }
-            })
-            .catch(error => console.error('Erreur lors du chargement des enclos :', error));
-    };
-    
-    
+        fetch(`biome.php?action=get_enclosures&biome=${encodeURIComponent(biome)}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.enclosures && Array.isArray(data.enclosures)) {
+                const enclosuresContent = document.getElementById('enclosures-container');
+                enclosuresContent.innerHTML = `
+                    <div class="enclosure-header">
+                        <h2>Biome : ${biome}</h2>
+                        <button id="back-to-biomes" class="return-button">Retour</button>
+                    </div>
+                    <div class="enclosure-grid">
+                        ${data.enclosures.map(enclosure => `
+                            <div class="enclosure-item ${enclosure.status === 'closed' ? 'closed' : ''}" 
+                                onclick="${enclosure.status === 'closed' ? "alert('Enclos fermé pour cause de travaux.')" : `loadAnimals(${enclosure.id})`}">
+                                <h3>${enclosure.name}</h3>
+                                <p>${enclosure.description}</p>
+                                ${enclosure.status === 'closed' ? '<span class="closed-tag">Fermé</span>' : ''}
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                showEnclosures();
+                document.getElementById('back-to-biomes').addEventListener('click', showBiomes);
+            } else {
+                console.error('Erreur : Aucun enclos disponible.');
+            }
+        })
+        .catch(error => console.error('Erreur lors du chargement des enclos :', error));
+};
 
     window.loadAnimals = function (enclosureId) {
-        fetch(`get_animals.php?enclosure_id=${enclosureId}`)
+        fetch(`biome.php?action=get_animals&enclosure_id=${enclosureId}`)
             .then(response => response.json())
             .then(data => {
                 if (data.animals && Array.isArray(data.animals)) {
@@ -171,21 +171,28 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault();
             const rating = ratingInput.value;
             const opinion = reviewForm.opinion.value;
-    
+        
             if (!rating || !opinion) {
                 alert('Veuillez remplir tous les champs.');
                 return;
             }
-    
-            fetch('submit_review.php', {
+        
+            fetch('avis.php?action=submit_review', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ enclosure_id: enclosureId, rating, opinion })
             })
-                .then(response => response.json())
-                .then(() => alert('Merci pour votre avis !'))
-                .catch(error => console.error('Erreur lors de l\'envoi de l\'avis :', error));
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    alert(data.error); // Afficher l'erreur (ex : connexion requise)
+                } else {
+                    alert('Merci pour votre avis !');
+                }
+            })
+            .catch(error => console.error('Erreur lors de l\'envoi de l\'avis :', error));
         });
+        
     }
     
 

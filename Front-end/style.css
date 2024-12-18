@@ -145,26 +145,26 @@ header .nav-links a, header .login a {
 .search-section {
     text-align: center;
     padding: 20px;
-    background-color: #000; /* Fond clair pour la section */
+    background-color: #000; 
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
-    max-width: 600px; /* Largeur maximale de la section */
+    max-width: 600px; 
 }
 
 .search-form {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Espacement entre les éléments */
+    gap: 10px; 
 }
 
 .search-input {
-    width: 60%; /* Réduit la largeur à 60% de la section */
+    width: 60%; 
     padding: 0.8em;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1em;
-    box-sizing: border-box; /* Inclut le padding dans la largeur */
+    box-sizing: border-box; 
 }
 
 .search-button {
@@ -240,33 +240,33 @@ section {
 .map-section {
     position: relative;
     text-align: center;
-    height: 500px; /* Ajustez la hauteur si nécessaire */
+    height: 500px; 
     background-image: url('public/parc-plan.jpeg');
-    background-size: cover; /* Couvre toute la section */
-    background-position: center; /* Centre l'image */
-    background-repeat: no-repeat; /* Évite la répétition de l'image */
-    color: #fff; /* Couleur blanche pour le texte */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: #fff; 
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centre verticalement */
-    align-items: center; /* Centre horizontalement */
-    padding: 20px; /* Espacement interne */
+    justify-content: center;
+    align-items: center;
+    padding: 20px; 
 }
 
 .map-section h2, 
 .map-section p {
     margin: 0;
-    z-index: 1; /* Assure que le texte est au-dessus de l'image */
-    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour améliorer la lisibilité */
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5); 
     padding: 10px 20px;
     border-radius: 5px;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Ajoute une ombre pour rendre le texte plus lisible */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); 
 }
 
 .map-buttons {
-    margin-top: auto; /* Place les boutons en bas de la section */
+    margin-top: auto; 
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    background: rgba(0, 0, 0, 0.5); 
     border-radius: 10px;
 }
 
@@ -284,112 +284,4 @@ section {
 .map-buttons .btn:hover {
     background-color: #555;
 }
-
-/* AVIS */
-.review-section {
-    padding: 60px 20px;
-    text-align: center;
-    background-image: url('public/enclos-belvedere.jpg');
-    background-size: cover; /* Fait en sorte que l'image couvre toute la section */
-    background-position: center; /* Centre l'image */
-    background-repeat: no-repeat; /* Évite la répétition de l'image */
-    color: #000;
-    height: 500px; /* Définissez une hauteur explicite pour agrandir la section */
-}
-
-.review-section h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.review-section p {
-    font-size: 1rem;
-    margin-bottom: 30px;
-}
-
-/* Formulaire d'avis */
-.wrapper {
-    background: #111; 
-    padding: 2rem;
-    max-width: 576px;
-    margin: 0 auto;
-    border-radius: .75rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    background-color: rgba(0, 0, 0, 0.5); /* Ton transparent : noir à 50% */
-}
-
-.rating {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem; /* Espacement entre les étoiles */
-    font-size: 2rem; /* Taille des étoiles */
-    color: #ccc; /* Couleur par défaut pour les étoiles */
-}
-
-.rating .star {
-    cursor: pointer; /* Curseur interactif */
-    transition: transform 0.3s ease, color 0.3s ease; /* Transition fluide */
-}
-
-.rating .bxs-star {
-    color: #FFBD13; /* Couleur pour les étoiles remplies */
-}
-
-.rating .active {
-    transform: scale(1.2); /* Agrandissement lors de la sélection */
-}
-
-textarea {
-    width: calc(100% - 2rem); /* Réduit la largeur en fonction du padding global */
-    background: #222;
-    padding: 1rem; /* Ajoute un espacement interne */
-    border-radius: .5rem;
-    border: none;
-    outline: none;
-    resize: none;
-    margin-bottom: 20px;
-    color: #eee;
-    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
-}
-
-textarea::placeholder {
-    color: #aaa;
-}
-
-.btn-group {
-    display: flex;
-    grid-gap: .5rem;
-    align-items: center;
-}
-
-.btn-group .btn {
-    padding: .75rem 1rem;
-    border-radius: .5rem;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: .875rem;
-    font-weight: 500;
-}
-
-.btn-group .btn.submit {
-    background: #f1683a;
-    color: #fff;
-}
-
-.btn-group .btn.submit:hover {
-    background: #d9534f;
-}
-
-.btn-group .btn.cancel {
-    background: #444;
-    color: #fff;
-}
-
-.btn-group .btn.cancel:hover {
-    background: #555;
-}
-
 

@@ -175,6 +175,38 @@ header .nav-links a, header .login a {
     transform: scale(1.05);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
 }
+.enclosure-item {
+    background-color: #111; /* Fond par défaut */
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    position: relative;
+}
+
+.enclosure-item.closed {
+    background-color: #b71c1c; /* Fond rouge pour les enclos fermés */
+    color: #fff;
+    cursor: not-allowed;
+}
+
+.enclosure-item .closed-tag {
+    position: absolute;
+    bottom: 10px; /* Position en bas */
+    left: 50%; /* Centrage horizontal */
+    transform: translateX(-50%); /* Ajustement précis pour centrer */
+    background-color: #ff5252; /* Rouge vif */
+    color: #fff;
+    padding: 3px 8px; /* Réduction de la taille */
+    font-size: 0.8em; /* Réduction de la taille du texte */
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
 
 
 
