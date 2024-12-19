@@ -207,7 +207,7 @@ $conn->close();
                         <h3><?php echo htmlspecialchars($result['animal_name']); ?></h3>
                         <p><strong>Biome :</strong> <?php echo htmlspecialchars($result['biome']); ?></p>
                         <p><strong>Enclos :</strong> <?php echo htmlspecialchars($result['enclosure_name']); ?></p>
-                        <a href="enclosure.php?id=<?php echo htmlspecialchars($result['enclosure_id']); ?>">Voir l'enclos</a>
+                        <a href="gestion-biomes.html">Voir les biomes</a>
                     </div>
                 <?php endforeach; ?>
             <?php else: ?>
