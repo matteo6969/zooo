@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Afficher la section admin et charger les enclos
     adminButton.addEventListener('click', function () {
-        adminManagementDiv.style.display = 'block';
+        adminManagementDiv.style.display = 'bck';
 
         fetch('biome.php?action=get_enclosures&admin=true') // Récupérer les enclos pour l'admin
             .then(response => response.json())
